@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>东莞市星越五金科技有限公司</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans SC',sans-serif;color:#333;line-height:1.6;background:#f8f9fa}
+header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);color:#fff;padding:20px 0;position:sticky;top:0;z-index:100}
+header .wrap{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:0 20px}
+header .logo{font-size:22px;font-weight:800;letter-spacing:2px}
+header nav a{color:#ccc;text-decoration:none;margin-left:24px;font-size:14px;transition:color .2s}
+header nav a:hover{color:#fff}
+
+.hero{background:linear-gradient(135deg,#1a1a2e,#0f3460);color:#fff;padding:80px 20px;text-align:center}
+.hero h1{font-size:36px;margin-bottom:16px;font-weight:800}
+.hero p{font-size:18px;opacity:.85;max-width:600px;margin:0 auto 30px}
+.hero .btn{display:inline-block;padding:14px 36px;background:#e74c3c;color:#fff;border-radius:8px;text-decoration:none;font-weight:600;font-size:16px;transition:transform .2s}
+.hero .btn:hover{transform:scale(1.05)}
+.hero .btn-outline{background:transparent;border:2px solid #fff;margin-left:12px}
+
+.section{padding:60px 20px}
+.section .wrap{max-width:1200px;margin:0 auto}
+.section h2{text-align:center;font-size:28px;margin-bottom:40px;position:relative}
+.section h2::after{content:'';display:block;width:60px;height:3px;background:#e74c3c;margin:12px auto 0}
+.section .sub{text-align:center;color:#666;margin-bottom:40px;font-size:15px}
+
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.service-card{background:#fff;border-radius:12px;padding:30px 24px;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,.06);transition:transform .2s}
+.service-card:hover{transform:translateY(-4px)}
+.service-card .icon{font-size:48px;margin-bottom:16px}
+.service-card h3{font-size:18px;margin-bottom:8px;color:#1a1a2e}
+.service-card p{font-size:13px;color:#666}
+
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.about-grid img{width:100%;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.1)}
+.about-text h3{font-size:22px;margin-bottom:16px;color:#1a1a2e}
+.about-text p{margin-bottom:12px;font-size:14px;color:#555}
+.about-text .stats{display:flex;gap:30px;margin-top:20px}
+.about-text .stat{text-align:center}
+.about-text .stat .num{font-size:28px;font-weight:800;color:#e74c3c}
+.about-text .stat .label{font-size:12px;color:#999}
+
+.equip-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:16px}
+.equip-item{background:#fff;border-radius:8px;padding:16px;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,.05);font-size:13px}
+.equip-item .eq-name{font-weight:600;color:#1a1a2e}
+
+.news-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px}
+.news-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.06);transition:transform .2s}
+.news-card:hover{transform:translateY(-2px)}
+.news-card .nc-body{padding:20px}
+.news-card .nc-date{font-size:11px;color:#999;margin-bottom:4px}
+.news-card h3{font-size:16px;margin-bottom:8px;color:#1a1a2e}
+.news-card p{font-size:13px;color:#666;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+
+.contact{background:#1a1a2e;color:#fff}
+.contact-grid{display:grid;grid-template-columns:1fr 2fr;gap:40px}
+.contact-info h3{font-size:22px;margin-bottom:16px}
+.contact-info p{margin-bottom:8px;font-size:14px;opacity:.8}
+.contact-form input,.contact-form textarea{width:100%;padding:12px;border:none;border-radius:6px;margin-bottom:12px;font-size:14px;font-family:inherit}
+.contact-form textarea{height:120px;resize:vertical}
+.contact-form button{padding:12px 32px;background:#e74c3c;color:#fff;border:none;border-radius:6px;font-size:15px;cursor:pointer;font-weight:600}
+
+footer{text-align:center;padding:24px;font-size:12px;color:#999;background:#111}
+footer a{color:#999}
+
+@media(max-width:768px){
+  .about-grid,.contact-grid{grid-template-columns:1fr}
+  header nav{display:none}
+  .hero h1{font-size:26px}
+  .hero p{font-size:14px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="logo">🔧 星越科技</div>
+    <nav>
+      <a href="#home">首页</a>
+      <a href="#services">业务范围</a>
+      <a href="#about">关于我们</a>
+      <a href="#equipment">设备展示</a>
+      <a href="#news">新闻动态</a>
+      <a href="#contact">联系我们</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <h1>精密制造 · 品质为本</h1>
+  <p>11年五金加工经验（2014年成立），CNC/NC精密加工 + 供应链全制程，服务全球客户</p>
+  <div>
+    <a href="#contact" class="btn">立即咨询</a>
+    <a href="#services" class="btn btn-outline">了解更多</a>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="wrap">
+    <h2>业务范围</h2>
+    <p class="sub">从原材料到成品，一站式金属制品解决方案</p>
+    <div class="services">
+      <div class="service-card"><div class="icon">⚙️</div><h3>CNC精密加工</h3><p>进口CNC加工中心，精度可达±0.005mm</p></div>
+      <div class="service-card"><div class="icon">🔩</div><h3>紧固件制造</h3><p>螺栓、螺母、垫圈等标准及非标紧固件</p></div>
+      <div class="service-card"><div class="icon">🔧</div><h3>钣金冲压</h3><p>激光切割、折弯、焊接、表面处理全制程</p></div>
+      <div class="service-card"><div class="icon">📐</div><h3>供应链外协</h3><p>塑胶、压铸、弹簧、热处理等全品类外协管理</p></div>
+      <div class="service-card"><div class="icon">✅</div><h3>质量控制</h3><p>三坐标、粗糙度仪、硬度计等70+检测设备</p></div>
+      <div class="service-card"><div class="icon">🚚</div><h3>组装包装</h3><p>组件装配、OEM包装、直接出货一条龙</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about" style="background:#fff">
+  <div class="wrap">
+    <h2>关于我们</h2>
+    <div class="about-grid">
+      <div>
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'%3E%3Crect width='600' height='400' fill='%23e8ecf1'/%3E%3Ctext x='300' y='190' text-anchor='middle' font-size='24' fill='%23999'%3E🏭 工厂实拍%3C/text%3E%3Ctext x='300' y='220' text-anchor='middle' font-size='14' fill='%23bbb'%3E待上传真实照片%3C/text%3E%3C/svg%3E" alt="工厂">
+      </div>
+      <div class="about-text">
+        <h3>东莞市星越五金科技有限公司</h3>
+        <p>成立于2014年，位于东莞市塘厦镇，是一家集研发、生产、销售于一体的五金科技企业。公司拥有各类进口及国产生产检测设备70余台，团队约80人。</p>
+        <p>主营CNC/NC精密加工，同时整合紧固件、钣金、冲压、塑胶等全制程供应链，为客户提供从图纸到成品的一站式服务。</p>
+        <p>年营业额超2000万元，位于东莞市塘厦镇大岭公一巷7号，服务客户遍布国内外，致力于成为金属制品行业的高附加值解决方案提供商。</p>
+        <div class="stats">
+          <div class="stat"><div class="num">11+</div><div class="label">年经验（2014年成立）</div></div>
+          <div class="stat"><div class="num">70+</div><div class="label">台设备</div></div>
+          <div class="stat"><div class="num">80+</div><div class="label">名员工</div></div>
+          <div class="stat"><div class="num">2000+</div><div class="label">万/年营收</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="equipment">
+  <div class="wrap">
+    <h2>设备展示</h2>
+    <p class="sub">各类进口及国产生产检测设备70余台</p>
+    <div class="equip-grid">
+      <div class="equip-item"><span class="eq-name">CNC加工中心</span><br><small>进口品牌 × 8台</small></div>
+      <div class="equip-item"><span class="eq-name">NC数控车床</span><br><small>多型号 × 15台</small></div>
+      <div class="equip-item"><span class="eq-name">无心磨床</span><br><small>高精度 × 3台</small></div>
+      <div class="equip-item"><span class="eq-name">激光切割机</span><br><small>光纤 × 2台</small></div>
+      <div class="equip-item"><span class="eq-name">数控折弯机</span><br><small>× 3台</small></div>
+      <div class="equip-item"><span class="eq-name">冲压设备</span><br><small>25T-200T</small></div>
+      <div class="equip-item"><span class="eq-name">三坐标测量仪</span><br><small>进口品牌</small></div>
+      <div class="equip-item"><span class="eq-name">粗糙度仪</span><br><small>高精度</small></div>
+      <div class="equip-item"><span class="eq-name">硬度计</span><br><small>洛氏/维氏</small></div>
+      <div class="equip-item"><span class="eq-name">投影仪</span><br><small>光学测量</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="news">
+  <div class="wrap">
+    <h2>新闻动态</h2>
+    <p class="sub">公司最新资讯与行业动态</p>
+    <div class="news-grid" id="newsGrid">
+      <div class="news-card"><div class="nc-body"><div class="nc-date">2026-06-19</div><h3>公司启动AI质量管理转型项目</h3><p>引入AI Agent技术，打造从图纸到出货的全链路质量闭环管理系统…</p></div></div>
+      <div class="news-card"><div class="nc-body"><div class="nc-date">2026-06-15</div><h3>星越滚轮产品通过星越客户验收</h3><p>H60008-024滚轮全制程18道工序一次合格率达98.5%，获得客户高度认可…</p></div></div>
+      <div class="news-card"><div class="nc-body"><div class="nc-date">2026-06-01</div><h3>公司通过ISO9001:2025换证审核</h3><p>质量管理体系通过SGS年度监督审核，零不符合项…</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="wrap">
+    <h2 style="color:#fff">联系我们</h2>
+    <p class="sub" style="color:#aaa">期待与您的合作</p>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>东莞市星越五金科技有限公司</h3>
+        <p>📍 东莞市塘厦镇大岭公一巷7号</p>
+        <p>📞 0769-83077878</p>
+        <p>📱 13509657859</p>
+        <p>🌐 dgjoystar.com</p>
+      </div>
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <input type="text" placeholder="您的姓名" required>
+        <input type="email" placeholder="邮箱地址">
+        <input type="tel" placeholder="联系电话">
+        <textarea placeholder="请描述您的需求…" required></textarea>
+        <button type="submit">发送询盘</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 东莞市星越五金科技有限公司 | <a href="https://beian.miit.gov.cn">粤ICP备xxxxxx号</a></p>
+</footer>
+
+<script>
+function handleSubmit(e){
+  e.preventDefault();
+  alert('感谢您的询盘！我们会尽快与您联系。');
+  e.target.reset();
+}
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    e.preventDefault();
+    var t=document.querySelector(this.getAttribute('href'));
+    if(t)t.scrollIntoView({behavior:'smooth'});
+  });
+});
+</script>
+</body>
+</html>
