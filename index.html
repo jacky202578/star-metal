@@ -100,6 +100,12 @@ body{font-family:-apple-system,"PingFang SC","Microsoft YaHei","Helvetica Neue",
 .cert-info strong{color:var(--primary)}
 .cert-verify{margin-top:10px;padding-top:10px;border-top:1px solid var(--border);font-size:13px;color:#94a3b8}
 .cert-verify a{color:var(--accent);text-decoration:none}
+
+/* ===== Gallery ===== */
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.gallery-item{border-radius:10px;overflow:hidden;border:1px solid var(--border);background:var(--light-bg);aspect-ratio:4/3}
+.gallery-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+.gallery-item:hover img{transform:scale(1.05)}
 @media(max-width:700px){.cert-card{flex-direction:column;align-items:center}.cert-img{width:100%;max-width:320px}}
 
 /* ===== Cases ===== */
@@ -179,6 +185,8 @@ body.english .lang-en{display:block}
       <a href="#quality" class="lang-en" style="display:none">Quality</a>
       <a href="#cases" class="lang-zh">客户案例</a>
       <a href="#cases" class="lang-en" style="display:none">Projects</a>
+      <a href="#gallery" class="lang-zh">公司实景</a>
+      <a href="#gallery" class="lang-en" style="display:none">Factory Tour</a>
       <a href="#faq" class="lang-zh">常见问题</a>
       <a href="#faq" class="lang-en" style="display:none">FAQ</a>
       <a href="#contact" class="lang-zh">联系我们</a>
@@ -364,6 +372,22 @@ body.english .lang-en{display:block}
           <div class="case-tags"><span>CNC车削</span><span>攻丝</span><span>不锈钢</span></div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 公司实景 Gallery ===== -->
+<section class="section" id="gallery">
+  <div class="section-inner">
+    <h2 class="section-title lang-zh">公司实景</h2>
+    <h2 class="section-title lang-en" style="display:none">Factory Tour</h2>
+    <p class="section-sub lang-zh">精工细作，始于车间 — 每一台设备都是品质的基石</p>
+    <p class="section-sub lang-en" style="display:none">Precision begins on the shop floor — every machine is the foundation of quality.</p>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="车间实拍1.jpg" alt="CNC加工车间" loading="lazy"></div>
+      <div class="gallery-item"><img src="车间实拍2.jpg" alt="精密加工现场" loading="lazy"></div>
+      <div class="gallery-item"><img src="车间实拍3.jpg" alt="数控机床作业" loading="lazy"></div>
+      <div class="gallery-item"><img src="车间实拍4.jpg" alt="生产车间实景" loading="lazy"></div>
     </div>
   </div>
 </section>
