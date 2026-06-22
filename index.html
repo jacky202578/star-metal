@@ -90,6 +90,18 @@ body{font-family:-apple-system,"PingFang SC","Microsoft YaHei","Helvetica Neue",
 .quality-item h4{font-size:14px;font-weight:600;margin-bottom:4px}
 .quality-item p{font-size:12px;color:var(--gray)}
 
+/* ===== Certificate ===== */
+.cert-section{margin-top:40px;padding-top:32px;border-top:1px solid var(--border)}
+.cert-title{font-size:18px;font-weight:700;text-align:center;margin-bottom:20px;color:var(--primary)}
+.cert-card{display:flex;gap:24px;align-items:flex-start;max-width:800px;margin:0 auto;background:var(--white);border:1px solid var(--border);border-radius:10px;padding:20px}
+.cert-img{width:280px;height:auto;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.1);flex-shrink:0}
+.cert-info{flex:1;font-size:14px;line-height:1.8;color:var(--gray)}
+.cert-info p{margin-bottom:6px}
+.cert-info strong{color:var(--primary)}
+.cert-verify{margin-top:10px;padding-top:10px;border-top:1px solid var(--border);font-size:13px;color:#94a3b8}
+.cert-verify a{color:var(--accent);text-decoration:none}
+@media(max-width:700px){.cert-card{flex-direction:column;align-items:center}.cert-img{width:100%;max-width:320px}}
+
 /* ===== Cases ===== */
 .case-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
 .case-card{background:var(--white);border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:box-shadow .2s}
@@ -286,6 +298,30 @@ body.english .lang-en{display:block}
       <div class="quality-item"><div class="icon">📊</div><h4 class="lang-zh">CPK分析</h4><h4 class="lang-en" style="display:none">CPK Analysis</h4><p class="lang-zh">过程能力持续监控</p><p class="lang-en" style="display:none">Process capability monitoring</p></div>
       <div class="quality-item"><div class="icon">🔍</div><h4 class="lang-zh">IQC/IPQC/OQC</h4><h4 class="lang-en" style="display:none">IQC/IPQC/OQC</h4><p class="lang-zh">三级检验体系</p><p class="lang-en" style="display:none">3-tier inspection</p></div>
       <div class="quality-item"><div class="icon">📝</div><h4 class="lang-zh">全制程追溯</h4><h4 class="lang-en" style="display:none">Traceability</h4><p class="lang-zh">每道工序可追溯</p><p class="lang-en" style="display:none">Full process records</p></div>
+    </div>
+    <!-- ISO 9001 认证证书 -->
+    <div class="cert-section">
+      <h3 class="cert-title lang-zh">ISO 9001 质量管理体系认证</h3>
+      <h3 class="cert-title lang-en" style="display:none">ISO 9001 Quality Management System</h3>
+      <div class="cert-card">
+        <img src="ISO9001认证证书.jpg" alt="ISO9001 Quality Management System Certificate" class="cert-img">
+        <div class="cert-info lang-zh">
+          <p><strong>证书编号：</strong>98923Q00199R0S</p>
+          <p><strong>认证标准：</strong>GB/T19001-2016 / ISO9001:2015</p>
+          <p><strong>覆盖范围：</strong>精密五金件的加工和销售</p>
+          <p><strong>有效期：</strong>2023年7月25日 — 2026年7月24日</p>
+          <p><strong>颁证机构：</strong>广东中和认证有限公司 (HCC)</p>
+          <p class="cert-verify">证书信息可在国家认监委官网 <a href="http://www.cnca.gov.cn" target="_blank" rel="noopener">www.cnca.gov.cn</a> 查询</p>
+        </div>
+        <div class="cert-info lang-en" style="display:none">
+          <p><strong>Certificate No:</strong> 98923Q00199R0S</p>
+          <p><strong>Standard:</strong> GB/T19001-2016 / ISO9001:2015</p>
+          <p><strong>Scope:</strong> Processing and Sales of Precision Hardware</p>
+          <p><strong>Validity:</strong> 2023-07-25 — 2026-07-24</p>
+          <p><strong>Issuer:</strong> Guangdong Harmonious Certification Co., Ltd.</p>
+          <p class="cert-verify">Verify at <a href="http://www.cnca.gov.cn" target="_blank" rel="noopener">www.cnca.gov.cn</a></p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
