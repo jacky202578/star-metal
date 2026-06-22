@@ -72,6 +72,7 @@ body{font-family:-apple-system,"PingFang SC","Microsoft YaHei","Helvetica Neue",
 .about-text p{color:var(--gray);font-size:15px;margin-bottom:16px;line-height:1.8}
 .about-right{display:flex;flex-direction:column;gap:16px}
 .about-img{width:100%;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.1);display:block}
+.about-imgs{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .about-stat{text-align:center;padding:20px;background:var(--white);border-radius:10px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
 .about-stat .num{font-size:24px;font-weight:800;color:var(--accent)}
@@ -233,7 +234,10 @@ body.english .lang-en{display:block}
         <p class="lang-en" style="display:none">We serve automotive, 3C electronics, medical devices, industrial automation, and smart home industries, delivering over 1 million parts cumulatively.</p>
       </div>
       <div class="about-right">
-        <img src="工厂外景1.jpg" alt="星越五金科技工厂外景" class="about-img">
+        <div class="about-imgs">
+          <img src="工厂外景1.jpg" alt="星越五金科技工厂外景" class="about-img">
+          <img src="工厂外景2.jpg" alt="星越五金科技工厂外景" class="about-img">
+        </div>
         <div class="about-stats">
           <div class="about-stat"><div class="num">2014</div><div class="label lang-zh">成立年份</div><div class="label lang-en" style="display:none">Founded</div></div>
           <div class="about-stat"><div class="num">70+</div><div class="label lang-zh">设备数量</div><div class="label lang-en" style="display:none">Machines</div></div>
