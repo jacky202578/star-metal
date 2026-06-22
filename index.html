@@ -3,227 +3,450 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title><span data-zh>东莞市星越五金科技有限公司</span><span data-en style="display:none">Dongguan XingYue Hardware Technology Co., Ltd.</span></title>
+<title>星越五金科技 - 精密CNC加工 · 全制程供应链 | Joystar Metal</title>
+<link rel="icon" type="image/jpeg" href="星越logo.jpg">
+<link rel="apple-touch-icon" href="星越logo.jpg">
+<meta property="og:image" content="https://jacky202578.github.io/star-metal/星越logo.jpg">
+<meta property="og:title" content="星越五金科技 - 精密CNC加工 · 全制程供应链">
+<meta property="og:description" content="东莞市星越五金科技有限公司，专注精密CNC加工与全制程供应链整合，年营收超2000万，70+台设备，80+名员工。">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans SC',sans-serif;color:#333;line-height:1.6;background:#f8f9fa}
-header{background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);color:#fff;padding:20px 0;position:sticky;top:0;z-index:100}
-header .wrap{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:0 20px}
-header .logo{font-size:22px;font-weight:800;letter-spacing:2px}
-header nav a{color:#ccc;text-decoration:none;margin-left:24px;font-size:14px;transition:color .2s}
-header nav a:hover{color:#fff}
 
-.hero{background:linear-gradient(135deg,#1a1a2e,#0f3460);color:#fff;padding:80px 20px;text-align:center}
-.hero h1{font-size:36px;margin-bottom:16px;font-weight:800}
-.hero p{font-size:18px;opacity:.85;max-width:600px;margin:0 auto 30px}
-.hero .btn{display:inline-block;padding:14px 36px;background:#e74c3c;color:#fff;border-radius:8px;text-decoration:none;font-weight:600;font-size:16px;transition:transform .2s}
-.hero .btn:hover{transform:scale(1.05)}
-.hero .btn-outline{background:transparent;border:2px solid #fff;margin-left:12px}
+/* ===== Reset & Base ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei","Helvetica Neue",sans-serif;color:#1a1a2e;background:#fff;line-height:1.6}
 
-.section{padding:60px 20px}
-.section .wrap{max-width:1200px;margin:0 auto}
-.section h2{text-align:center;font-size:28px;margin-bottom:40px;position:relative}
-.section h2::after{content:'';display:block;width:60px;height:3px;background:#e74c3c;margin:12px auto 0}
-.section .sub{text-align:center;color:#666;margin-bottom:40px;font-size:15px}
-
-.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
-.service-card{background:#fff;border-radius:12px;padding:30px 24px;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,.06);transition:transform .2s}
-.service-card:hover{transform:translateY(-4px)}
-.service-card .icon{font-size:48px;margin-bottom:16px}
-.service-card h3{font-size:18px;margin-bottom:8px;color:#1a1a2e}
-.service-card p{font-size:13px;color:#666}
-
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-.about-grid img{width:100%;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.1)}
-.about-text h3{font-size:22px;margin-bottom:16px;color:#1a1a2e}
-.about-text p{margin-bottom:12px;font-size:14px;color:#555}
-.about-text .stats{display:flex;gap:30px;margin-top:20px}
-.about-text .stat{text-align:center}
-.about-text .stat .num{font-size:28px;font-weight:800;color:#e74c3c}
-.about-text .stat .label{font-size:12px;color:#999}
-
-.equip-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:16px}
-.equip-item{background:#fff;border-radius:8px;padding:16px;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,.05);font-size:13px}
-.equip-item .eq-name{font-weight:600;color:#1a1a2e}
-
-.news-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px}
-.news-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.06);transition:transform .2s}
-.news-card:hover{transform:translateY(-2px)}
-.news-card .nc-body{padding:20px}
-.news-card .nc-date{font-size:11px;color:#999;margin-bottom:4px}
-.news-card h3{font-size:16px;margin-bottom:8px;color:#1a1a2e}
-.news-card p{font-size:13px;color:#666;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-
-.contact{background:#1a1a2e;color:#fff}
-.contact-grid{display:grid;grid-template-columns:1fr 2fr;gap:40px}
-.contact-info h3{font-size:22px;margin-bottom:16px}
-.contact-info p{margin-bottom:8px;font-size:14px;opacity:.8}
-.contact-form input,.contact-form textarea{width:100%;padding:12px;border:none;border-radius:6px;margin-bottom:12px;font-size:14px;font-family:inherit}
-.contact-form textarea{height:120px;resize:vertical}
-.contact-form button{padding:12px 32px;background:#e74c3c;color:#fff;border:none;border-radius:6px;font-size:15px;cursor:pointer;font-weight:600}
-
-footer{text-align:center;padding:24px;font-size:12px;color:#999;background:#111}
-footer a{color:#999}
-
-@media(max-width:768px){
-  .about-grid,.contact-grid{grid-template-columns:1fr}
-  header nav{display:none}
-  .hero h1{font-size:26px}
-  .hero p{font-size:14px}
+/* ===== Colors ===== */
+:root{
+  --primary:#1a1a2e;
+  --accent:#2d6a9f;
+  --accent-light:#4a90c4;
+  --gray:#6b7280;
+  --light-bg:#f7f8fa;
+  --border:#e5e7eb;
+  --white:#fff;
+  --tag-blue:#dbeafe;
+  --tag-text:#1e40af;
 }
 
-.lang-switch{position:fixed;top:12px;right:16px;z-index:1000;display:flex;gap:4px}
-.lang-switch button{padding:4px 12px;border-radius:4px;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;font-size:12px;cursor:pointer;transition:all .2s}
-.lang-switch button.active{background:#e74c3c;border-color:#e74c3c;color:#fff;font-weight:600}
+/* ===== Lang Toggle ===== */
+.lang-bar{background:var(--primary);color:var(--white);padding:4px 20px;text-align:right;font-size:13px}
+.lang-bar a{color:#93c5fd;text-decoration:none;cursor:pointer;margin:0 6px}
+.lang-bar a.active{color:#fff;font-weight:600;text-decoration:underline}
+.lang-bar span{color:#6b7280;margin:0 2px}
+
+/* ===== Header ===== */
+.header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+.header-inner{max-width:1200px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;text-decoration:none}
+.logo img{height:36px;width:auto;display:block}
+.nav{display:flex;gap:24px;align-items:center}
+.nav a{text-decoration:none;color:var(--gray);font-size:14px;font-weight:500;transition:color .2s}
+.nav a:hover{color:var(--accent)}
+.mobile-menu-btn{display:none;background:none;border:none;font-size:24px;cursor:pointer;color:var(--primary);padding:4px}
+
+/* ===== Hero ===== */
+.hero{background:linear-gradient(135deg,#1a1a2e 0%,#2d6a9f 100%);color:#fff;padding:80px 20px;text-align:center}
+.hero h1{font-size:clamp(28px,5vw,52px);font-weight:800;margin-bottom:16px;letter-spacing:-.5px}
+.hero p{font-size:clamp(14px,2vw,18px);color:rgba(255,255,255,.8);max-width:700px;margin:0 auto 32px;line-height:1.7}
+.hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 32px;border-radius:8px;font-size:15px;font-weight:600;text-decoration:none;transition:all .2s;cursor:pointer;border:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-light);transform:translateY(-1px)}
+.btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.4)}
+.btn-outline:hover{border-color:#fff;transform:translateY(-1px)}
+.hero-stats{display:flex;gap:40px;justify-content:center;flex-wrap:wrap;margin-top:40px}
+.hero-stat{text-align:center}
+.hero-stat .num{font-size:28px;font-weight:800}
+.hero-stat .label{font-size:13px;color:rgba(255,255,255,.6);margin-top:4px}
+
+/* ===== Sections ===== */
+.section{padding:60px 20px}
+.section-inner{max-width:1100px;margin:0 auto}
+.section-title{font-size:clamp(20px,3vw,28px);font-weight:700;margin-bottom:8px;color:var(--primary)}
+.section-sub{color:var(--gray);font-size:15px;margin-bottom:40px}
+.section-alt{background:var(--light-bg)}
+
+/* ===== About ===== */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.about-text p{color:var(--gray);font-size:15px;margin-bottom:16px;line-height:1.8}
+.about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.about-stat{text-align:center;padding:20px;background:var(--white);border-radius:10px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.about-stat .num{font-size:24px;font-weight:800;color:var(--accent)}
+.about-stat .label{font-size:12px;color:var(--gray);margin-top:4px}
+
+/* ===== Capabilities ===== */
+.cap-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.cap-card{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:20px;transition:box-shadow .2s}
+.cap-card:hover{box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.cap-card .icon{font-size:28px;margin-bottom:8px}
+.cap-card h3{font-size:15px;font-weight:700;margin-bottom:6px}
+.cap-card p{font-size:13px;color:var(--gray);line-height:1.6}
+
+/* ===== Quality ===== */
+.quality-qrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+.quality-item{text-align:center;padding:16px}
+.quality-item .icon{font-size:32px;margin-bottom:8px}
+.quality-item h4{font-size:14px;font-weight:600;margin-bottom:4px}
+.quality-item p{font-size:12px;color:var(--gray)}
+
+/* ===== Cases ===== */
+.case-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.case-card{background:var(--white);border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:box-shadow .2s}
+.case-card:hover{box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.case-img{height:160px;background:linear-gradient(135deg,#e5e7eb,#d1d5db);display:flex;align-items:center;justify-content:center;font-size:40px;color:#9ca3af}
+.case-body{padding:16px}
+.case-body h3{font-size:15px;font-weight:700;margin-bottom:4px}
+.case-body p{font-size:13px;color:var(--gray);margin-bottom:8px}
+.case-tags{display:flex;gap:4px;flex-wrap:wrap}
+.case-tags span{background:var(--tag-blue);color:var(--tag-text);padding:2px 8px;border-radius:4px;font-size:11px}
+
+/* ===== FAQ ===== */
+.faq-list{max-width:700px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--border);padding:16px 0}
+.faq-q{display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-size:15px;font-weight:600;color:var(--primary)}
+.faq-q .arrow{transition:transform .2s;font-size:12px;color:var(--gray)}
+.faq-item.open .faq-q .arrow{transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s;color:var(--gray);font-size:14px;line-height:1.7}
+.faq-item.open .faq-a{max-height:200px;padding-top:12px}
+
+/* ===== Contact ===== */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.contact-info h3{font-size:16px;font-weight:700;margin-bottom:16px}
+.contact-info p{font-size:14px;color:var(--gray);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.contact-info .label{color:var(--primary);font-weight:600;min-width:60px}
+.contact-form input,.contact-form textarea{width:100%;padding:12px;border:1px solid var(--border);border-radius:8px;font-size:14px;margin-bottom:12px;font-family:inherit}
+.contact-form textarea{height:120px;resize:vertical}
+.contact-form input:focus,.contact-form textarea:focus{outline:none;border-color:var(--accent)}
+
+/* ===== Footer ===== */
+.footer{background:var(--primary);color:rgba(255,255,255,.6);text-align:center;padding:24px 20px;font-size:13px}
+.footer a{color:#93c5fd;text-decoration:none}
+
+/* ===== Responsive ===== */
+@media(max-width:768px){
+  .nav{display:none}
+  .nav.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--white);padding:16px 20px;border-bottom:1px solid var(--border);gap:12px}
+  .mobile-menu-btn{display:block}
+  .about-grid,.contact-grid{grid-template-columns:1fr}
+  .hero{padding:60px 20px}
+  .hero-stats{gap:20px}
+  .about-stats{grid-template-columns:repeat(3,1fr)}
+  .quality-qrid{grid-template-columns:repeat(2,1fr)}
+  .section{padding:40px 20px}
+}
+
+/* ===== Lang-specific ===== */
+.lang-en{display:none}
+body.english .lang-zh{display:none}
+body.english .lang-en{display:block}
 </style>
 </head>
 <body>
-<div class="lang-switch"><button class="active" onclick="setLang('zh')">中文</button><button onclick="setLang('en')">EN</button></div>
-<header>
-  <div class="wrap">
-    <div class="logo"><span data-zh>🔧 星越科技</span><span data-en style="display:none">🔧 XingYue Tech</span></div>
-    <nav>
-      <a href="#home"><span data-zh>首页</span><span data-en style="display:none">Home</span></a>
-      <a href="#services"><span data-zh>业务范围</span><span data-en style="display:none">Services</span></a>
-      <a href="#about"><span data-zh>关于我们</span><span data-en style="display:none">About</span></a>
-      <a href="#equipment"><span data-zh>设备展示</span><span data-en style="display:none">Equipment</span></a>
-      <a href="#news"><span data-zh>新闻动态</span><span data-en style="display:none">News</span></a>
-      <a href="#contact"><span data-zh>联系我们</span><span data-en style="display:none">Contact</span></a>
+
+<!-- ===== 语言切换 ===== -->
+<div class="lang-bar">
+  <a href="#" class="active" onclick="setLang('zh')">中文</a>
+  <span>|</span>
+  <a href="#" onclick="setLang('en')">English</a>
+</div>
+
+<!-- ===== Header ===== -->
+<header class="header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <img src="星越logo.jpg" alt="星越五金科技" style="height:38px;width:auto;display:block">
+    </a>
+    <nav class="nav" id="mainNav">
+      <a href="#about" class="lang-zh">关于我们</a>
+      <a href="#about" class="lang-en" style="display:none">About</a>
+      <a href="#capabilities" class="lang-zh">业务范围</a>
+      <a href="#capabilities" class="lang-en" style="display:none">Services</a>
+      <a href="#quality" class="lang-zh">品质保证</a>
+      <a href="#quality" class="lang-en" style="display:none">Quality</a>
+      <a href="#cases" class="lang-zh">客户案例</a>
+      <a href="#cases" class="lang-en" style="display:none">Projects</a>
+      <a href="#faq" class="lang-zh">常见问题</a>
+      <a href="#faq" class="lang-en" style="display:none">FAQ</a>
+      <a href="#contact" class="lang-zh">联系我们</a>
+      <a href="#contact" class="lang-en" style="display:none">Contact</a>
     </nav>
+    <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
   </div>
 </header>
 
-<section class="hero" id="home">
-  <h1><span data-zh>精密制造 · 品质为本</span><span data-en style="display:none">Precision Manufacturing · Quality First</span></h1>
-  <p><span data-zh>11年五金加工经验（2014年成立），CNC/NC精密加工 + 供应链全制程，服务全球客户</span><span data-en style="display:none">11 Years Since 2014 · CNC/NC Precision Machining · Global Supply Chain</span></p>
-  <div>
-    <a href="#contact" class="btn"><span data-zh>立即咨询</span><span data-en style="display:none">Contact Us</span></a>
-    <a href="#services" class="btn btn-outline"><span data-zh>了解更多</span><span data-en style="display:none">Learn More</span></a>
+<!-- ===== Hero ===== -->
+<section class="hero">
+  <h1 class="lang-zh">精密金属零件 · 全制程供应链专家</h1>
+  <h1 class="lang-en" style="display:none">Precision Metal Parts<br>Full-Supply-Chain Manufacturing</h1>
+  <p class="lang-zh">从图纸到成品的完整解决方案——CNC数控加工、车铣复合、冲压钣金、表面处理、组装检测，一站式交付，让您的产品精益求精。</p>
+  <p class="lang-en" style="display:none">Complete solution from blueprint to finished product — CNC machining, mill-turn, stamping, sheet metal, surface treatment, assembly & inspection. One-stop delivery for your precision needs.</p>
+  <div class="hero-btns">
+    <a href="#contact" class="btn btn-primary lang-zh">获取报价</a>
+    <a href="#contact" class="btn btn-primary lang-en" style="display:none">Request Quote</a>
+    <a href="#capabilities" class="btn btn-outline lang-zh">了解业务</a>
+    <a href="#capabilities" class="btn btn-outline lang-en" style="display:none">Our Services</a>
+  </div>
+  <div class="hero-stats">
+    <div class="hero-stat"><div class="num">70+</div><div class="label lang-zh">生产/检测设备</div><div class="label lang-en" style="display:none">Machines</div></div>
+    <div class="hero-stat"><div class="num">80</div><div class="label lang-zh">专业团队</div><div class="label lang-en" style="display:none">Team Members</div></div>
+    <div class="hero-stat"><div class="num">18</div><div class="label lang-zh">全制程工序</div><div class="label lang-en" style="display:none">Process Steps</div></div>
+    <div class="hero-stat"><div class="num">4000万+</div><div class="label lang-zh">年营收</div><div class="label lang-en" style="display:none">Annual Revenue</div></div>
   </div>
 </section>
 
-<section class="section" id="services">
-  <div class="wrap">
-    <h2><span data-zh>业务范围</span><span data-en style="display:none">Our Services</span></h2>
-    <p class="sub"><span data-zh>从原材料到成品，一站式金属制品解决方案</span><span data-en style="display:none">One-Stop Metal Solutions</span></p>
-    <div class="services">
-      <div class="service-card"><div class="icon">⚙️</div><h3><span data-zh>CNC精密加工</span><span data-en style="display:none">CNC Machining</span></h3><p><span data-zh>进口CNC加工中心，精度可达±0.005mm</span><span data-en style="display:none">Imported CNC Centers, ±0.005mm</span></p></div>
-      <div class="service-card"><div class="icon">🔩</div><h3><span data-zh>紧固件制造</span><span data-en style="display:none">Fasteners</span></h3><p><span data-zh>螺栓、螺母、垫圈等标准及非标紧固件</span><span data-en style="display:none">Standard & Custom Bolts, Nuts, Washers</span></p></div>
-      <div class="service-card"><div class="icon">🔧</div><h3><span data-zh>钣金冲压</span><span data-en style="display:none">Sheet Metal</span></h3><p><span data-zh>激光切割、折弯、焊接、表面处理全制程</span><span data-en style="display:none">Laser Cut, Bend, Weld, Surface Finish</span></p></div>
-      <div class="service-card"><div class="icon">📐</div><h3><span data-zh>供应链外协</span><span data-en style="display:none">Supply Chain</span></h3><p><span data-zh>塑胶、压铸、弹簧、热处理等全品类外协管理</span><span data-en style="display:none">Plastics, Die-Casting, Springs, Heat Treatment</span></p></div>
-      <div class="service-card"><div class="icon">✅</div><h3><span data-zh>质量控制</span><span data-en style="display:none">Quality Control</span></h3><p><span data-zh>三坐标、粗糙度仪、硬度计等70+检测设备</span><span data-en style="display:none">CMM, Roughness, Hardness Testers & 70+ Units</span></p></div>
-      <div class="service-card"><div class="icon">🚚</div><h3><span data-zh>组装包装</span><span data-en style="display:none">Assembly & Packing</span></h3><p><span data-zh>组件装配、OEM包装、直接出货一条龙</span><span data-en style="display:none">Assembly, OEM Packing, Direct Shipping</span></p></div>
+<!-- ===== About ===== -->
+<section class="section" id="about">
+  <div class="section-inner">
+    <h2 class="section-title lang-zh">关于星越</h2>
+    <h2 class="section-title lang-en" style="display:none">About Joystar Metal</h2>
+    <p class="section-sub lang-zh">专注精密金属零件加工，以技术驱动品质，以供应链整合创造价值</p>
+    <p class="section-sub lang-en" style="display:none">Precision metal parts manufacturing — technology-driven quality, supply-chain integration for value creation.</p>
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="lang-zh">东莞市星越五金科技有限公司，成立于2014年，是一家集CNC数控加工、车铣复合加工、冲压钣金、全制程外协管理于一体的精密制造企业。公司位于东莞市塘厦镇，拥有进口及国产生产和检测设备70余台，专业团队80余人，年营收突破4000万元。</p>
+        <p class="lang-en" style="display:none">Founded in 2014, Dongguan Joystar Metal Products Technology Co., Ltd. is a precision manufacturing enterprise integrating CNC machining, mill-turn, stamping, sheet metal, and full supply chain management. Located in Tangxia, Dongguan, with 70+ machines and 80+ professionals, our annual revenue exceeds 20 million CNY. We serve automotive, 3C electronics, medical devices, industrial automation, and smart home industries.
+        <p class="lang-zh">我们服务的行业涵盖：汽车零部件、3C电子、医疗设备、工业自动化、智能家居等，累计交付各类精密零件超百万件。</p>
+        <p class="lang-en" style="display:none">We serve automotive, 3C electronics, medical devices, industrial automation, and smart home industries, delivering over 1 million parts cumulatively.</p>
+      </div>
+      <div class="about-stats">
+        <div class="about-stat"><div class="num">2014</div><div class="label lang-zh">成立年份</div><div class="label lang-en" style="display:none">Founded</div></div>
+        <div class="about-stat"><div class="num">70+</div><div class="label lang-zh">设备数量</div><div class="label lang-en" style="display:none">Machines</div></div>
+        <div class="about-stat"><div class="num">18</div><div class="label lang-zh">全制程</div><div class="label lang-en" style="display:none">Full Process</div></div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="about" style="background:#fff">
-  <div class="wrap">
-    <h2><span data-zh>关于我们</span><span data-en style="display:none">About Us</span></h2>
-    <div class="about-grid">
-      <div>
-        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'%3E%3Crect width='600' height='400' fill='%23e8ecf1'/%3E%3Ctext x='300' y='190' text-anchor='middle' font-size='24' fill='%23999'%3E🏭 工厂实拍%3C/text%3E%3Ctext x='300' y='220' text-anchor='middle' font-size='14' fill='%23bbb'%3E待上传真实照片%3C/text%3E%3C/svg%3E" alt="工厂">
+<!-- ===== Capabilities ===== -->
+<section class="section section-alt" id="capabilities">
+  <div class="section-inner">
+    <h2 class="section-title lang-zh">业务范围</h2>
+    <h2 class="section-title lang-en" style="display:none">Capabilities</h2>
+    <p class="section-sub lang-zh">从单工序零件到全制程总成，灵活满足您的需求</p>
+    <p class="section-sub lang-en" style="display:none">From single-operation parts to full-process assemblies, we flexibly meet your needs.</p>
+    <div class="cap-grid">
+      <div class="cap-card">
+        <div class="icon">⚙️</div>
+        <h3 class="lang-zh">CNC数控加工</h3>
+        <h3 class="lang-en" style="display:none">CNC Machining</h3>
+        <p class="lang-zh">3轴/4轴/5轴加工中心，精度可达±0.005mm，支持铝合金/不锈钢/铜/钛/工程塑料等30+材料</p>
+        <p class="lang-en" style="display:none">3/4/5-axis machining centers, tolerances down to ±0.005mm. 30+ materials including aluminum, stainless steel, brass, titanium, engineering plastics.</p>
       </div>
-      <div class="about-text">
-        <h3><span data-zh>东莞市星越五金科技有限公司</span><span data-en style="display:none">Dongguan XingYue Hardware Technology Co., Ltd.</span></h3>
-        <p><span data-zh>成立于2014年，位于东莞市塘厦镇，是一家集研发、生产、销售于一体的五金科技企业。</span><span data-en style="display:none">Founded in 2014, Tangxia Town, Dongguan. Integrating R&D, production and sales.</span>公司拥有各类进口及国产生产检测设备70余台，团队约80人。</p>
-        <p><span data-zh>主营CNC/NC精密加工，同时整合紧固件、钣金、冲压、塑胶等全制程供应链，为客户提供从图纸到成品的一站式服务。</span><span data-en style="display:none">Specializing in CNC/NC machining, integrating fasteners, sheet metal, stamping & plastics. One-stop from drawing to delivery.</span></p>
-        <p><span data-zh>年营业额超2000万元，位于东莞市塘厦镇大岭公一巷7号</span><span data-en style="display:none">20M+ Annual Revenue, No.7 Dalinggong 1st Lane, Tangxia, Dongguan</span>，服务客户遍布国内外，致力于成为金属制品行业的高附加值解决方案提供商。</p>
-        <div class="stats">
-          <div class="stat"><div class="num">11+</div><div class="label"><span data-zh><span data-zh>年经验</span><span data-en style="display:none">Years Exp</span>（2014年成立）</span><span data-en style="display:none">Years Since 2014</span></div></div>
-          <div class="stat"><div class="num">70+</div><div class="label"><span data-zh>台设备</span><span data-en style="display:none">Equipment</span></div></div>
-          <div class="stat"><div class="num">80+</div><div class="label"><span data-zh><span data-zh>名员工</span><span data-en style="display:none">Employees</span></span><span data-en style="display:none">Employees</span></div></div>
-          <div class="stat"><div class="num">2000+</div><div class="label"><span data-zh>万/年营收</span><span data-en style="display:none">M Revenue/yr</span></div></div>
+      <div class="cap-card">
+        <div class="icon">🔩</div>
+        <h3 class="lang-zh">车铣复合加工</h3>
+        <h3 class="lang-en" style="display:none">Mill-Turn</h3>
+        <p class="lang-zh">走心机/走刀机，一次装夹完成车削、铣削、钻孔、攻丝，适用于精密轴类/异形件</p>
+        <p class="lang-en" style="display:none">Swiss-type and sliding-head lathes with live tooling. Complete complex parts in one setup.</p>
+      </div>
+      <div class="cap-card">
+        <div class="icon">🔧</div>
+        <h3 class="lang-zh">冲压钣金</h3>
+        <h3 class="lang-en" style="display:none">Stamping & Sheet Metal</h3>
+        <p class="lang-zh">精密冲压/折弯/激光切割/焊接，机箱外壳/支架/结构件</p>
+        <p class="lang-en" style="display:none">Precision stamping, bending, laser cutting, welding. Enclosures, brackets, structural components.</p>
+      </div>
+      <div class="cap-card">
+        <div class="icon">🔄</div>
+        <h3 class="lang-zh">表面处理</h3>
+        <h3 class="lang-en" style="display:none">Surface Finishing</h3>
+        <p class="lang-zh">阳极氧化/电镀/喷涂/钝化/拉丝/抛光/喷砂。符合RoHS/REACH标准</p>
+        <p class="lang-en" style="display:none">Anodizing, plating, powder coating, passivation, brushing, polishing, sandblasting. RoHS/REACH compliant.</p>
+      </div>
+      <div class="cap-card">
+        <div class="icon">📋</div>
+        <h3 class="lang-zh">供应链全制程</h3>
+        <h3 class="lang-en" style="display:none">Supply Chain Mgmt</h3>
+        <p class="lang-zh">紧固件/塑胶/钣金/压铸/冲压/热处理/表面处理等全制程外协管理，统一品质标准</p>
+        <p class="lang-en" style="display:none">Fasteners, plastics, sheet metal, die casting, heat treatment — fully managed sub-supply chain with unified quality standards.</p>
+      </div>
+      <div class="cap-card">
+        <div class="icon">📐</div>
+        <h3 class="lang-zh">设计与优化</h3>
+        <h3 class="lang-en" style="display:none">Design & DFM</h3>
+        <p class="lang-zh">DFM分析（可制造性设计）、图纸评审、工艺优化、协助客户降本增效</p>
+        <p class="lang-en" style="display:none">DFM analysis, drawing review, process optimization. Help clients reduce cost and improve manufacturability.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Quality ===== -->
+<section class="section" id="quality">
+  <div class="section-inner">
+    <h2 class="section-title lang-zh">品质保证</h2>
+    <h2 class="section-title lang-en" style="display:none">Quality Assurance</h2>
+    <p class="section-sub lang-zh">60余台检测设备 · 全制程质量追溯 · 严守ISO 9001标准</p>
+    <p class="section-sub lang-en" style="display:none">60+ inspection instruments · Full-process traceability · ISO 9001 standards</p>
+    <div class="quality-qrid">
+      <div class="quality-item"><div class="icon">📏</div><h4 class="lang-zh">三坐标测量</h4><h4 class="lang-en" style="display:none">CMM</h4><p class="lang-zh">精度±1μm</p><p class="lang-en" style="display:none">Accuracy ±1μm</p></div>
+      <div class="quality-item"><div class="icon">🔬</div><h4 class="lang-zh">影像测量仪</h4><h4 class="lang-en" style="display:none">Vision System</h4><p class="lang-zh">自动编程测量</p><p class="lang-en" style="display:none">Auto programming</p></div>
+      <div class="quality-item"><div class="icon">✅</div><h4 class="lang-zh">全检出货</h4><h4 class="lang-en" style="display:none">100% Inspection</h4><p class="lang-zh">出货前全尺寸检测</p><p class="lang-en" style="display:none">Full dimensional check</p></div>
+      <div class="quality-item"><div class="icon">📊</div><h4 class="lang-zh">CPK分析</h4><h4 class="lang-en" style="display:none">CPK Analysis</h4><p class="lang-zh">过程能力持续监控</p><p class="lang-en" style="display:none">Process capability monitoring</p></div>
+      <div class="quality-item"><div class="icon">🔍</div><h4 class="lang-zh">IQC/IPQC/OQC</h4><h4 class="lang-en" style="display:none">IQC/IPQC/OQC</h4><p class="lang-zh">三级检验体系</p><p class="lang-en" style="display:none">3-tier inspection</p></div>
+      <div class="quality-item"><div class="icon">📝</div><h4 class="lang-zh">全制程追溯</h4><h4 class="lang-en" style="display:none">Traceability</h4><p class="lang-zh">每道工序可追溯</p><p class="lang-en" style="display:none">Full process records</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Cases ===== -->
+<section class="section section-alt" id="cases">
+  <div class="section-inner">
+    <h2 class="section-title lang-zh">客户案例</h2>
+    <h2 class="section-title lang-en" style="display:none">Project Showcase</h2>
+    <p class="section-sub lang-zh">每一个零件背后都是严谨的工艺与极致的检验</p>
+    <p class="section-sub lang-en" style="display:none">Every part tells a story of precision process and rigorous inspection.</p>
+    <div class="case-grid">
+      <div class="case-card">
+        <div class="case-img">⚙️</div>
+        <div class="case-body">
+          <h3>滚轮组件</h3>
+          <p class="lang-zh">客户：星越 · 18道工序 · 2000件 · 2000件</p>
+          <p class="lang-en" style="display:none">Client: Star · 18 processes · 2000 pcs</p>
+          <div class="case-tags"><span>CNC车铣</span><span>焊接</span><span>无心磨</span><span>抛光</span></div>
+        </div>
+      </div>
+      <div class="case-card">
+        <div class="case-img">🔩</div>
+        <div class="case-body">
+          <h3 class="lang-zh">横梁固定件</h3>
+          <h3 class="lang-en" style="display:none">Beam Mounting Bracket</h3>
+          <p class="lang-zh">精密压铸+CNC精加工，尺寸公差±0.02mm</p>
+          <p class="lang-en" style="display:none">Die casting + CNC finishing, tolerance ±0.02mm</p>
+          <div class="case-tags"><span>压铸</span><span>CNC精加工</span><span>表面处理</span></div>
+        </div>
+      </div>
+      <div class="case-card">
+        <div class="case-img">🪛</div>
+        <div class="case-body">
+          <h3 class="lang-zh">水嘴接头</h3>
+          <h3 class="lang-en" style="display:none">Water Nozzle</h3>
+          <p class="lang-zh">不锈钢精密车削 + 攻丝，多规格批量交付</p>
+          <p class="lang-en" style="display:none">Stainless steel precision turning + tapping, batch delivery</p>
+          <div class="case-tags"><span>CNC车削</span><span>攻丝</span><span>不锈钢</span></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="equipment">
-  <div class="wrap">
-    <h2><span data-zh>设备展示</span><span data-en style="display:none">Our Equipment</span></h2>
-    <p class="sub"><span data-zh>各类进口及国产生产检测设备70余台</span><span data-en style="display:none">70+ Production & Test Equipment</span></p>
-    <div class="equip-grid">
-      <div class="equip-item"><span class="eq-name"><span data-zh>CNC加工中心</span><span data-en style="display:none">CNC Centers</span></span><br><small>进口品牌 × 8台</small></div>
-      <div class="equip-item"><span class="eq-name"><span data-zh>NC数控车床</span><span data-en style="display:none">NC Lathes</span></span><br><small>多型号 × 15台</small></div>
-      <div class="equip-item"><span class="eq-name"><span data-zh>无心磨床</span><span data-en style="display:none">Centerless Grinder</span></span><br><small>高精度 × 3台</small></div>
-      <div class="equip-item"><span class="eq-name"><span data-zh>激光切割机</span><span data-en style="display:none">Laser Cutter</span></span><br><small>光纤 × 2台</small></div>
-      <div class="equip-item"><span class="eq-name"><span data-zh>数控折弯机</span><span data-en style="display:none">CNC Brake</span></span><br><small>× 3台</small></div>
-      <div class="equip-item"><span class="eq-name"><span data-zh>冲压设备</span><span data-en style="display:none">Stamping Press</span></span><br><small>25T-200T</small></div>
-      <div class="equip-item"><span class="eq-name"><span data-zh>三坐标测量仪</span><span data-en style="display:none">CMM Machine</span></span><br><small>进口品牌</small></div>
-      <div class="equip-item"><span class="eq-name"><span data-zh>粗糙度仪</span><span data-en style="display:none">Roughness</span></span><br><small>高精度</small></div>
-      <div class="equip-item"><span class="eq-name"><span data-zh>硬度计</span><span data-en style="display:none">Hardness</span></span><br><small>洛氏/维氏</small></div>
-      <div class="equip-item"><span class="eq-name"><span data-zh>投影仪</span><span data-en style="display:none">Projector</span></span><br><small>光学测量</small></div>
-    </div>
+<!-- ===== FAQ ===== -->
+<section class="section" id="faq">
+  <div class="section-inner">
+    <h2 class="section-title lang-zh">常见问题</h2>
+    <h2 class="section-title lang-en" style="display:none">FAQ</h2>
+    <p class="section-sub lang-zh">您关心的，我们来回答</p>
+    <p class="section-sub lang-en" style="display:none">Your questions answered</p>
+    <div class="faq-list" id="faqList"></div>
   </div>
 </section>
 
-<section class="section" id="news">
-  <div class="wrap">
-    <h2><span data-zh>新闻动态</span><span data-en style="display:none">News & Updates</span></h2>
-    <p class="sub"><span data-zh>公司最新资讯与行业动态</span><span data-en style="display:none">Latest News & Updates</span></p>
-    <div class="news-grid" id="newsGrid">
-      <div class="news-card"><div class="nc-body"><div class="nc-date">2026-06-19</div><h3><span data-zh>公司启动AI质量管理转型项目</span><span data-en style="display:none">AI Quality Transformation Launched</span></h3><p><span data-zh>引入AI Agent技术，打造从图纸到出货的全链路质量闭环管理系统…</span><span data-en style="display:none">AI Agent for end-to-end quality management from drawing to shipping...</span></p></div></div>
-      <div class="news-card"><div class="nc-body"><div class="nc-date">2026-06-15</div><h3><span data-zh>星越滚轮产品通过星越客户验收</span><span data-en style="display:none">Roller Products Pass Customer Audit</span></h3><p><span data-zh>H60008-024滚轮全制程18道工序一次合格率达98.5%，获得客户高度认可…</span><span data-en style="display:none">H60008-024 Roller: 98.5% yield across 18 processes...</span></p></div></div>
-      <div class="news-card"><div class="nc-body"><div class="nc-date">2026-06-01</div><h3><span data-zh>公司通过ISO9001:2025换证审核</span><span data-en style="display:none">ISO 9001:2025 Recertification</span></h3><p><span data-zh>质量管理体系通过SGS年度监督审核，零不符合项…</span><span data-en style="display:none">QMS passed SGS audit with zero non-conformities...</span></p></div></div>
-    </div>
-  </div>
-</section>
-
-<section class="section contact" id="contact">
-  <div class="wrap">
-    <h2 style="color:#fff">联系我们</h2>
-    <p class="sub" style="color:#aaa"><span data-zh>期待与您的合作</span><span data-en style="display:none">We Look Forward to Working with You</span></p>
+<!-- ===== Contact ===== -->
+<section class="section section-alt" id="contact">
+  <div class="section-inner">
+    <h2 class="section-title lang-zh">联系我们</h2>
+    <h2 class="section-title lang-en" style="display:none">Contact Us</h2>
+    <p class="section-sub lang-zh">有项目需求、技术问题或合作意向？欢迎联系我们，2小时内回复</p>
+    <p class="section-sub lang-en" style="display:none">Have a project, technical question, or collaboration idea? We reply within 2 hours.</p>
     <div class="contact-grid">
       <div class="contact-info">
-        <h3><span data-zh>东莞市星越五金科技有限公司</span><span data-en style="display:none">Dongguan XingYue Hardware Technology Co., Ltd.</span></h3>
-        <p><span data-zh>📍 东莞市塘厦镇大岭公一巷7号</span><span data-en style="display:none">📍 No.7, Dalinggong 1st Lane, Tangxia</span></p>
-        <p>📞 0769-83077878</p>
-        <p>📱 13509657859</p>
-        <p>🌐 dgjoystar.com</p>
+        <h3 class="lang-zh">星越五金科技</h3>
+        <h3 class="lang-en" style="display:none">Joystar Metal</h3>
+        <p><span class="label">📞</span> +86 13509657859</p>
+        <p><span class="label">📧</span> Jackyxiao@dgjoystar.com</p>
+        <p><span class="label">📍</span> <span class="lang-zh">广东省东莞市塘厦镇大岭公一巷7号</span><span class="lang-en" style="display:none">No.7 Dalingsong 1st Lane, Tangxia, Dongguan, Guangdong, China</span></p>
+        <p style="margin-top:16px;font-size:13px;color:#999">
+          <span class="lang-zh">工作时间：周一至周六 8:00 - 18:00</span>
+          <span class="lang-en" style="display:none">Hours: Mon-Sat 8:00-18:00</span>
+        </p>
       </div>
-      <form class="contact-form" onsubmit="handleSubmit(event)">
-        <input type="text" placeholder="" data-zh-ph="您的姓名" data-en-ph="Your Name" required>
-        <input type="email" placeholder="" data-zh-ph="邮箱地址" data-en-ph="Email">
-        <input type="tel" placeholder="" data-zh-ph="联系电话" data-en-ph="Phone">
-        <textarea placeholder="" data-zh-ph="请描述您的需求…" data-en-ph="Describe your needs..." required></textarea>
-        <button type="submit"><span data-zh>发送询盘</span><span data-en style="display:none">Send Inquiry</span></button>
+      <form class="contact-form" onsubmit="submitForm(event)">
+        <input type="text" id="formName" placeholder="您的姓名 / Name" required>
+        <input type="email" id="formEmail" placeholder="邮箱 / Email" required>
+        <input type="text" id="formSubject" placeholder="主题 / Subject">
+        <textarea id="formMessage" placeholder="描述您的需求 / Describe your requirements..." required></textarea>
+        <button type="submit" class="btn btn-primary lang-zh">发送询价</button>
+        <button type="submit" class="btn btn-primary lang-en" style="display:none">Send Inquiry</button>
       </form>
     </div>
   </div>
 </section>
 
-<footer>
-  <p>© 2026 <span data-zh>东莞市星越五金科技有限公司</span><span data-en style="display:none">Dongguan XingYue Hardware Technology Co., Ltd.</span> | <a href="https://beian.miit.gov.cn">粤ICP备xxxxxx号</a></p>
+<footer class="footer">
+  <p>© 2026 <span class="lang-zh">星越五金科技</span><span class="lang-en" style="display:none">Dongguan Joystar Metal Products Technology Co., Ltd.</span> — All Rights Reserved</p>
 </footer>
 
 <script>
-function setLang(l){
-  localStorage.setItem('lang',l);
-  var btns=document.querySelectorAll('.lang-switch button');
-  btns[0].classList.toggle('active',l==='zh');
-  btns[1].classList.toggle('active',l==='en');
-  document.querySelectorAll('[data-zh]').forEach(function(e){e.style.display=l==='zh'?'':'none';});
-  document.querySelectorAll('[data-en]').forEach(function(e){e.style.display=l==='en'?'':'none';});
-  document.querySelectorAll('[data-zh-ph]').forEach(function(e){e.placeholder=e.getAttribute('data-'+(l==='zh'?'zh':'en')+'-ph');});
-}
-(function(){setLang(localStorage.getItem('lang')||'zh');})();
-</script>
-<script>
-function handleSubmit(e){
-  e.preventDefault();
-  alert('感谢您的询盘！我们会尽快与您联系。');
-  e.target.reset();
-}
-// Smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(function(a){
-  a.addEventListener('click',function(e){
-    e.preventDefault();
-    var t=document.querySelector(this.getAttribute('href'));
-    if(t)t.scrollIntoView({behavior:'smooth'});
+// ===== Language Toggle =====
+function setLang(lang){
+  document.body.className = (lang === 'en') ? 'english' : '';
+  // Update active state
+  document.querySelectorAll('.lang-bar a').forEach(a => a.classList.toggle('active', a.textContent === (lang === 'zh' ? '中文' : 'English')));
+  // Toggle nav links
+  document.querySelectorAll('.nav a').forEach(a => {
+    if(a.classList.contains('lang-zh')) a.style.display = (lang === 'zh') ? '' : 'none';
+    if(a.classList.contains('lang-en')) a.style.display = (lang === 'en') ? '' : 'none';
   });
-});
+  // Toggle all lang elements
+  document.querySelectorAll('.lang-zh').forEach(el => el.style.display = (lang === 'zh') ? '' : 'none');
+  document.querySelectorAll('.lang-en').forEach(el => el.style.display = (lang === 'en') ? '' : 'none');
+  // Update FAQ content
+  renderFAQ(lang);
+}
+
+// ===== Mobile Menu =====
+function toggleMenu(){
+  document.getElementById('mainNav').classList.toggle('open');
+}
+
+// ===== FAQ Data =====
+const faqData = {
+  zh: [
+    {q:'你们能达到什么精度？', a:'CNC加工精度可达 ±0.005mm，车削件可达 ±0.01mm。具体取决于零件尺寸、材料、复杂度，我们会在报价前进行DFM分析并给出精度评估。'},
+    {q:'最小起订量是多少？', a:'没有严格MOQ。打样1件起做，批量生产根据工艺复杂度评估，欢迎携带图纸咨询。'},
+    {q:'报价需要提供什么信息？', a:'产品图纸（PDF/STEP/IGES优先）、材料要求、年用量、关键公差标注。我们收到后48小时内出DFM分析及报价。'},
+    {q:'你们有保密协议吗？', a:'签约前即可签署NDA。所有客户图纸和技术资料受保密协议保护。'},
+    {q:'交期通常多久？', a:'打样3-5天，批量首单15-25天，返单根据工艺复杂度可缩短30-50%。'},
+    {q:'你们是否支持全制程？', a:'是的。从原材料采购到CNC加工、表面处理、组装、检测、包装出货，全程统一管控品质。'},
+  ],
+  en: [
+    {q:'What tolerances can you achieve?', a:'CNC machining tolerances down to ±0.005mm, turning ±0.01mm. Depends on part size, material, and complexity. We provide DFM analysis within 48 hours of receiving your drawing.'},
+    {q:'What is the minimum order quantity?', a:'No strict MOQ. Prototypes from 1 piece. Production quantities evaluated based on process complexity. Contact us with your drawing.'},
+    {q:'What information is needed for a quote?', a:'Product drawing (PDF/STEP/IGES preferred), material specification, annual volume, critical tolerance callouts. DFM analysis and quote within 48 hours.'},
+    {q:'Do you sign NDAs?', a:'Yes, NDAs are signed before project initiation. All customer drawings and technical data are protected.'},
+    {q:'What are your typical lead times?', a:'Prototypes: 3-5 days. First production batch: 15-25 days. Repeat orders can be 30-50% faster.'},
+    {q:'Do you offer full supply chain management?', a:'Yes. From raw material procurement to CNC machining, surface treatment, assembly, inspection, and packaging — unified quality control throughout.'},
+  ]
+};
+
+function renderFAQ(lang){
+  const list = document.getElementById('faqList');
+  const data = faqData[lang] || faqData.zh;
+  list.innerHTML = data.map((item,i) => `
+    <div class="faq-item" onclick="toggleFAQ(this)">
+      <div class="faq-q">${item.q}<span class="arrow">▼</span></div>
+      <div class="faq-a">${item.a}</div>
+    </div>
+  `).join('');
+}
+
+function toggleFAQ(el){
+  el.classList.toggle('open');
+}
+
+// ===== Contact Form =====
+function submitForm(e){
+  e.preventDefault();
+  const btn = e.target.querySelector('button');
+  btn.textContent = '✓ ' + (document.body.className.includes('english') ? 'Sent!' : '已发送！');
+  btn.style.background = '#27ae60';
+  setTimeout(() => { btn.textContent = document.body.className.includes('english') ? 'Send Inquiry' : '发送询价'; btn.style.background = ''; }, 3000);
+  // In production: send to backend
+}
+
+// Init
+renderFAQ('zh');
 </script>
 </body>
 </html>
