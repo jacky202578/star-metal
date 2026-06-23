@@ -169,6 +169,9 @@ body{font-family:-apple-system,"PingFang SC","Microsoft YaHei","Helvetica Neue",
 .lang-en{display:none}
 .lang-ja{display:none}
 .lang-ko{display:none}
+body.english .lang-en{display:revert !important}
+body.japanese .lang-ja{display:revert !important}
+body.korean .lang-ko{display:revert !important}
 
 /* ===== 微信浮窗 ===== */
 .wechat-float{position:fixed;right:20px;bottom:100px;z-index:999;width:52px;height:52px;background:#07C160;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 12px rgba(7,193,96,.4);transition:transform .2s,box-shadow .2s}
@@ -620,14 +623,13 @@ function setLang(lang){
   // Update language bar active state
   const labels = {zh:'中文', en:'English', ja:'日本語', ko:'한국어'};
   document.querySelectorAll('.lang-bar a').forEach(a => a.classList.toggle('active', a.textContent === labels[lang]));
-  // Show active language, hide others
+  // Hide non-active languages via JS inline
   ['lang-zh','lang-en','lang-ja','lang-ko'].forEach(cls => {
-    const show = cls === 'lang-' + lang;
-    document.querySelectorAll('.' + cls).forEach(el => {
-      el.style.display = show ? '' : 'none';
-    });
+    if(cls !== 'lang-' + lang){
+      document.querySelectorAll('.' + cls).forEach(el => el.style.display = 'none');
+    }
   });
-  // Update FAQ content
+  // CSS (with body class + !important) handles showing active language
   renderFAQ(lang);
 }
 
