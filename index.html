@@ -169,6 +169,26 @@ body{font-family:-apple-system,"PingFang SC","Microsoft YaHei","Helvetica Neue",
 .lang-en{display:none}
 body.english .lang-zh{display:none}
 body.english .lang-en{display:block}
+
+/* ===== 微信浮窗 ===== */
+.wechat-float{position:fixed;right:20px;bottom:100px;z-index:999;width:52px;height:52px;background:#07C160;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 12px rgba(7,193,96,.4);transition:transform .2s,box-shadow .2s}
+.wechat-float:hover{transform:scale(1.1);box-shadow:0 6px 20px rgba(7,193,96,.5)}
+.wechat-float:active{transform:scale(.95)}
+.wechat-tooltip{position:absolute;right:62px;top:50%;transform:translateY(-50%);background:#333;color:#fff;padding:6px 12px;border-radius:6px;font-size:12px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s}
+.wechat-tooltip small{color:#aaa;font-size:11px}
+.wechat-float:hover .wechat-tooltip{opacity:1}
+.wechat-popup{position:fixed;right:20px;bottom:170px;z-index:1000;background:white;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,.15);padding:24px;width:260px;display:none;text-align:center}
+.wechat-popup.open{display:block;animation:popupIn .3s}
+@keyframes popupIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.wechat-popup-close{position:absolute;top:8px;right:12px;cursor:pointer;font-size:16px;color:#999}
+.wechat-popup-icon{font-size:40px;margin-bottom:8px}
+.wechat-popup-title{font-size:16px;font-weight:700;color:#1a1a2e;margin-bottom:4px}
+.wechat-popup-desc{font-size:13px;color:#666;margin-bottom:16px}
+.wechat-popup-btn{display:inline-block;background:#07C160;color:white;padding:10px 28px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600;transition:background .2s}
+.wechat-popup-btn:hover{background:#06ad56}
+.wechat-popup-id{font-size:12px;color:#999;margin-top:12px}
+.wechat-popup-id strong{color:#1a1a2e}
+@media(max-width:768px){.wechat-float{right:12px;bottom:80px;width:46px;height:46px}}
 </style>
 </head>
 <body>
@@ -573,6 +593,38 @@ function submitForm(e){
 
 // Init
 renderFAQ('zh');
+</script>
+
+<!-- ===== 侧边微信浮窗 ===== -->
+<div class="wechat-float" onclick="openWeChat()">
+  <svg viewBox="0 0 24 24" width="28" height="28" fill="white"><path d="M8.5 2C4.36 2 1 5.13 1 8.5c0 1.88.98 3.58 2.5 4.69L3 15.5l3.19-1.69c.72.27 1.5.44 2.31.52l.36-.03a12.5 12.5 0 0 1-.36-1.3C8.9 9.31 11.7 6.5 15.5 6.5c.34 0 .67.03 1 .08C15.62 3.18 12.31 2 8.5 2zm-2 3.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm4 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2zM15.5 7c-3.59 0-6.5 2.69-6.5 6s2.91 6 6.5 6c.59 0 1.17-.08 1.74-.22L19 20.5l-.44-2.19C19.77 17.22 22 15.52 22 13c0-3.31-2.91-6-6.5-6zm-2 3.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm4 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>
+  <span class="wechat-tooltip" id="wechatTooltip">微信咨询<br><small>Jackyxiao138</small></span>
+</div>
+
+<div class="wechat-popup" id="wechatPopup">
+  <div class="wechat-popup-content">
+    <div class="wechat-popup-close" onclick="closeWeChatPopup()">✕</div>
+    <div class="wechat-popup-icon">💬</div>
+    <div class="wechat-popup-title">微信联系</div>
+    <div class="wechat-popup-desc">点击下方按钮，直接打开微信沟通</div>
+    <a href="weixin://" class="wechat-popup-btn">打开微信</a>
+    <div class="wechat-popup-id">或搜索微信号：<strong>Jackyxiao138</strong></div>
+  </div>
+</div>
+
+<script>
+function openWeChat(){
+  const popup = document.getElementById('wechatPopup');
+  popup.classList.toggle('open');
+  if(popup.classList.contains('open')){
+    const a = document.createElement('a');
+    a.href = 'weixin://';
+    a.click();
+  }
+}
+function closeWeChatPopup(){
+  document.getElementById('wechatPopup').classList.remove('open');
+}
 </script>
 </body>
 </html>
