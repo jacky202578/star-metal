@@ -166,12 +166,13 @@ body{font-family:-apple-system,"PingFang SC","Microsoft YaHei","Helvetica Neue",
 }
 
 /* ===== Lang-specific ===== */
-.lang-en{display:none}
-.lang-ja{display:none}
-.lang-ko{display:none}
-body.english .lang-en{display:revert !important}
-body.japanese .lang-ja{display:revert !important}
-body.korean .lang-ko{display:revert !important}
+.lang-zh{display:revert}
+.lang-en,.lang-ja,.lang-ko{display:none}
+body:not(.chinese):not(.english):not(.japanese):not(.korean) .lang-zh{display:revert}
+body.english .lang-zh,body.japanese .lang-zh,body.korean .lang-zh{display:none}
+body.english .lang-en{display:revert}
+body.japanese .lang-ja{display:revert}
+body.korean .lang-ko{display:revert}
 
 /* ===== 微信浮窗 ===== */
 .wechat-float{position:fixed;right:20px;bottom:100px;z-index:999;width:52px;height:52px;background:#07C160;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 12px rgba(7,193,96,.4);transition:transform .2s,box-shadow .2s}
@@ -215,37 +216,37 @@ body.korean .lang-ko{display:revert !important}
     </a>
     <nav class="nav" id="mainNav">
       <a href="#about" class="lang-zh">关于我们</a>
-      <a href="#about" class="lang-en" style="display:none">About</a>
-      <a href="#about" class="lang-ja" style="display:none">会社概要</a>
-      <a href="#about" class="lang-ko" style="display:none">회사 소개</a>
+      <a href="#about" class="lang-en">About</a>
+      <a href="#about" class="lang-ja">会社概要</a>
+      <a href="#about" class="lang-ko">회사 소개</a>
       <a href="#capabilities" class="lang-zh">业务范围</a>
-      <a href="#capabilities" class="lang-en" style="display:none">Services</a>
-      <a href="#capabilities" class="lang-ja" style="display:none">事業内容</a>
-      <a href="#capabilities" class="lang-ko" style="display:none">서비스</a>
+      <a href="#capabilities" class="lang-en">Services</a>
+      <a href="#capabilities" class="lang-ja">事業内容</a>
+      <a href="#capabilities" class="lang-ko">서비스</a>
       <a href="#quality" class="lang-zh">品质保证</a>
-      <a href="#quality" class="lang-en" style="display:none">Quality</a>
-      <a href="#quality" class="lang-ja" style="display:none">品質保証</a>
-      <a href="#quality" class="lang-ko" style="display:none">품질 보증</a>
+      <a href="#quality" class="lang-en">Quality</a>
+      <a href="#quality" class="lang-ja">品質保証</a>
+      <a href="#quality" class="lang-ko">품질 보증</a>
       <a href="#cases" class="lang-zh">客户案例</a>
-      <a href="#cases" class="lang-en" style="display:none">Projects</a>
-      <a href="#cases" class="lang-ja" style="display:none">実績紹介</a>
-      <a href="#cases" class="lang-ko" style="display:none">프로젝트</a>
+      <a href="#cases" class="lang-en">Projects</a>
+      <a href="#cases" class="lang-ja">実績紹介</a>
+      <a href="#cases" class="lang-ko">프로젝트</a>
       <a href="#gallery" class="lang-zh">公司实景</a>
-      <a href="#gallery" class="lang-en" style="display:none">Factory Tour</a>
-      <a href="#gallery" class="lang-ja" style="display:none">工場見学</a>
-      <a href="#gallery" class="lang-ko" style="display:none">공장 투어</a>
+      <a href="#gallery" class="lang-en">Factory Tour</a>
+      <a href="#gallery" class="lang-ja">工場見学</a>
+      <a href="#gallery" class="lang-ko">공장 투어</a>
       <a href="#products" class="lang-zh">产品展示</a>
-      <a href="#products" class="lang-en" style="display:none">Products</a>
-      <a href="#products" class="lang-ja" style="display:none">製品紹介</a>
-      <a href="#products" class="lang-ko" style="display:none">제품</a>
+      <a href="#products" class="lang-en">Products</a>
+      <a href="#products" class="lang-ja">製品紹介</a>
+      <a href="#products" class="lang-ko">제품</a>
       <a href="#faq" class="lang-zh">常见问题</a>
-      <a href="#faq" class="lang-en" style="display:none">FAQ</a>
-      <a href="#faq" class="lang-ja" style="display:none">よくある質問</a>
-      <a href="#faq" class="lang-ko" style="display:none">FAQ</a>
+      <a href="#faq" class="lang-en">FAQ</a>
+      <a href="#faq" class="lang-ja">よくある質問</a>
+      <a href="#faq" class="lang-ko">FAQ</a>
       <a href="#contact" class="lang-zh">联系我们</a>
-      <a href="#contact" class="lang-en" style="display:none">Contact</a>
-      <a href="#contact" class="lang-ja" style="display:none">お問い合わせ</a>
-      <a href="#contact" class="lang-ko" style="display:none">문의하기</a>
+      <a href="#contact" class="lang-en">Contact</a>
+      <a href="#contact" class="lang-ja">お問い合わせ</a>
+      <a href="#contact" class="lang-ko">문의하기</a>
     </nav>
     <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
   </div>
@@ -254,28 +255,28 @@ body.korean .lang-ko{display:revert !important}
 <!-- ===== Hero ===== -->
 <section class="hero">
   <h1 class="lang-zh">精密金属零件 · 全制程供应链专家</h1>
-  <h1 class="lang-en" style="display:none">Precision Metal Parts<br>Full-Supply-Chain Manufacturing</h1>
-  <h1 class="lang-ja" style="display:none">精密金属部品 · フルサプライチェーン</h1>
-  <h1 class="lang-ko" style="display:none">정밀 금속 부품 · 풀 서플라이 체인</h1>
+  <h1 class="lang-en">Precision Metal Parts<br>Full-Supply-Chain Manufacturing</h1>
+  <h1 class="lang-ja">精密金属部品 · フルサプライチェーン</h1>
+  <h1 class="lang-ko">정밀 금속 부품 · 풀 서플라이 체인</h1>
   <p class="lang-zh">从图纸到成品的完整解决方案——CNC数控加工、车铣复合、冲压钣金、表面处理、组装检测，一站式交付，让您的产品精益求精。</p>
-  <p class="lang-en" style="display:none">Complete solution from blueprint to finished product — CNC machining, mill-turn, stamping, sheet metal, surface treatment, assembly & inspection. One-stop delivery for your precision needs.</p>
-  <p class="lang-ja" style="display:none">図面から完成品まで一貫対応—CNC加工、複合加工、板金、表面処理、組立検査までワンストップで高品質を提供します。</p>
-  <p class="lang-ko" style="display:none">도면에서 완제품까지 원스톱 솔루션 — CNC 가공, 복합 가공, 판금, 표면 처리, 조립 검사까지 고품질 원스톱 제공.</p>
+  <p class="lang-en">Complete solution from blueprint to finished product — CNC machining, mill-turn, stamping, sheet metal, surface treatment, assembly & inspection. One-stop delivery for your precision needs.</p>
+  <p class="lang-ja">図面から完成品まで一貫対応—CNC加工、複合加工、板金、表面処理、組立検査までワンストップで高品質を提供します。</p>
+  <p class="lang-ko">도면에서 완제품까지 원스톱 솔루션 — CNC 가공, 복합 가공, 판금, 표면 처리, 조립 검사까지 고품질 원스톱 제공.</p>
   <div class="hero-btns">
     <a href="#contact" class="btn btn-primary lang-zh">获取报价</a>
-    <a href="#contact" class="btn btn-primary lang-en" style="display:none">Request Quote</a>
-    <a href="#contact" class="btn btn-primary lang-ja" style="display:none">お見積り</a>
-    <a href="#contact" class="btn btn-primary lang-ko" style="display:none">견적 문의</a>
+    <a href="#contact" class="btn btn-primary lang-en">Request Quote</a>
+    <a href="#contact" class="btn btn-primary lang-ja">お見積り</a>
+    <a href="#contact" class="btn btn-primary lang-ko">견적 문의</a>
     <a href="#capabilities" class="btn btn-outline lang-zh">了解业务</a>
-    <a href="#capabilities" class="btn btn-outline lang-en" style="display:none">Our Services</a>
-    <a href="#capabilities" class="btn btn-outline lang-ja" style="display:none">事業内容</a>
-    <a href="#capabilities" class="btn btn-outline lang-ko" style="display:none">서비스</a>
+    <a href="#capabilities" class="btn btn-outline lang-en">Our Services</a>
+    <a href="#capabilities" class="btn btn-outline lang-ja">事業内容</a>
+    <a href="#capabilities" class="btn btn-outline lang-ko">서비스</a>
   </div>
   <div class="hero-stats">
-    <div class="hero-stat"><div class="num">100+</div><div class="label lang-zh">生产/检测设备</div><div class="label lang-en" style="display:none">Machines</div><div class="label lang-ja" style="display:none">生産/検査設備</div><div class="label lang-ko" style="display:none">생산/검사 장비</div></div>
-    <div class="hero-stat"><div class="num">80</div><div class="label lang-zh">专业团队</div><div class="label lang-en" style="display:none">Team Members</div><div class="label lang-ja" style="display:none">専門チーム</div><div class="label lang-ko" style="display:none">전문 팀</div></div>
-    <div class="hero-stat"><div class="num">18</div><div class="label lang-zh">全制程工序</div><div class="label lang-en" style="display:none">Process Steps</div><div class="label lang-ja" style="display:none">全工程</div><div class="label lang-ko" style="display:none">전체 공정</div></div>
-    <div class="hero-stat"><div class="num">4000万+</div><div class="label lang-zh">年营收</div><div class="label lang-en" style="display:none">Annual Revenue</div><div class="label lang-ja" style="display:none">年収</div><div class="label lang-ko" style="display:none">연간 매출</div></div>
+    <div class="hero-stat"><div class="num">100+</div><div class="label lang-zh">生产/检测设备</div><div class="label lang-en">Machines</div><div class="label lang-ja">生産/検査設備</div><div class="label lang-ko">생산/검사 장비</div></div>
+    <div class="hero-stat"><div class="num">80</div><div class="label lang-zh">专业团队</div><div class="label lang-en">Team Members</div><div class="label lang-ja">専門チーム</div><div class="label lang-ko">전문 팀</div></div>
+    <div class="hero-stat"><div class="num">18</div><div class="label lang-zh">全制程工序</div><div class="label lang-en">Process Steps</div><div class="label lang-ja">全工程</div><div class="label lang-ko">전체 공정</div></div>
+    <div class="hero-stat"><div class="num">4000万+</div><div class="label lang-zh">年营收</div><div class="label lang-en">Annual Revenue</div><div class="label lang-ja">年収</div><div class="label lang-ko">연간 매출</div></div>
   </div>
 </section>
 
@@ -283,29 +284,29 @@ body.korean .lang-ko{display:revert !important}
 <section class="section" id="about">
   <div class="section-inner">
     <h2 class="section-title lang-zh">关于星越</h2>
-    <h2 class="section-title lang-en" style="display:none">About Joystar Metal</h2>
-    <h2 class="section-title lang-ja" style="display:none">星越について</h2>
-    <h2 class="section-title lang-ko" style="display:none">회사 소개</h2>
+    <h2 class="section-title lang-en">About Joystar Metal</h2>
+    <h2 class="section-title lang-ja">星越について</h2>
+    <h2 class="section-title lang-ko">회사 소개</h2>
     <p class="section-sub lang-zh">专注精密金属零件加工，以技术驱动品质，以供应链整合创造价值</p>
-    <p class="section-sub lang-en" style="display:none">Precision metal parts manufacturing — technology-driven quality, supply-chain integration for value creation.</p>
-    <p class="section-sub lang-ja" style="display:none">精密金属部品加工に特化、技術で品質を、サプライチェーン統合で価値を創造します</p>
+    <p class="section-sub lang-en">Precision metal parts manufacturing — technology-driven quality, supply-chain integration for value creation.</p>
+    <p class="section-sub lang-ja">精密金属部品加工に特化、技術で品質を、サプライチェーン統合で価値を創造します</p>
     <div class="about-grid">
       <div class="about-text">
         <p class="lang-zh">东莞市星越五金科技有限公司，成立于2014年，是一家集CNC数控加工、车铣复合加工、冲压钣金、全制程外协管理于一体的精密制造企业。公司位于东莞市塘厦镇，拥有进口及国产生产和检测设备100余台，专业团队80余人，年营收突破4000万元。</p>
-        <p class="lang-en" style="display:none">Founded in 2014, Dongguan Joystar Metal Products Technology Co., Ltd. is a precision manufacturing enterprise integrating CNC machining, mill-turn, stamping, sheet metal, and full supply chain management. Located in Tangxia, Dongguan, with 100+ machines and 80+ professionals, our annual revenue exceeds 20 million CNY. We serve automotive, 3C electronics, medical devices, industrial automation, and smart home industries.
-        <p class="lang-ja" style="display:none">2014年に設立された東莞市星越五金科技有限公司は、CNC加工、複合加工、板金、全工程外注管理を統合した精密製造企業です。東莞市塘厦鎮に位置し、100台以上の生産・検査設備、80名以上の専門チームを擁し、年商は4000万元以上。自動車部品、3C電子、医療機器、産業用ロボット、スマートホームなど幅広い業界に対応しています。
+        <p class="lang-en">Founded in 2014, Dongguan Joystar Metal Products Technology Co., Ltd. is a precision manufacturing enterprise integrating CNC machining, mill-turn, stamping, sheet metal, and full supply chain management. Located in Tangxia, Dongguan, with 100+ machines and 80+ professionals, our annual revenue exceeds 20 million CNY. We serve automotive, 3C electronics, medical devices, industrial automation, and smart home industries.
+        <p class="lang-ja">2014年に設立された東莞市星越五金科技有限公司は、CNC加工、複合加工、板金、全工程外注管理を統合した精密製造企業です。東莞市塘厦鎮に位置し、100台以上の生産・検査設備、80名以上の専門チームを擁し、年商は4000万元以上。自動車部品、3C電子、医療機器、産業用ロボット、スマートホームなど幅広い業界に対応しています。
         <p class="lang-zh">我们服务的行业涵盖：汽车零部件、3C电子、医疗设备、工业自动化、智能家居等，累计交付各类精密零件超百万件。</p>
-        <p class="lang-en" style="display:none">We serve automotive, 3C electronics, medical devices, industrial automation, and smart home industries, delivering over 1 million parts cumulatively.</p>
-        <p class="lang-ja" style="display:none">自動車部品、3C電子、医療機器、産業オートメーション、スマートホーム等、累計100万点以上の精密部品を納入してきました。</p>
+        <p class="lang-en">We serve automotive, 3C electronics, medical devices, industrial automation, and smart home industries, delivering over 1 million parts cumulatively.</p>
+        <p class="lang-ja">自動車部品、3C電子、医療機器、産業オートメーション、スマートホーム等、累計100万点以上の精密部品を納入してきました。</p>
       </div>
       <div class="about-right">
         <div class="about-imgs">
           <img src="工厂外景1.jpg" alt="星越五金科技工厂外景" class="about-img">
         </div>
         <div class="about-stats">
-          <div class="about-stat"><div class="num">2014</div><div class="label lang-zh">成立年份</div><div class="label lang-en" style="display:none">Founded</div><div class="label lang-ja" style="display:none">設立</div><div class="label lang-ko" style="display:none">설립</div></div>
-          <div class="about-stat"><div class="num">100+</div><div class="label lang-zh">设备数量</div><div class="label lang-en" style="display:none">Machines</div><div class="label lang-ja" style="display:none">設備台数</div><div class="label lang-ko" style="display:none">장비 대수</div></div>
-          <div class="about-stat"><div class="num">18</div><div class="label lang-zh">全制程</div><div class="label lang-en" style="display:none">Full Process</div><div class="label lang-ja" style="display:none">全工程</div></div>
+          <div class="about-stat"><div class="num">2014</div><div class="label lang-zh">成立年份</div><div class="label lang-en">Founded</div><div class="label lang-ja">設立</div><div class="label lang-ko">설립</div></div>
+          <div class="about-stat"><div class="num">100+</div><div class="label lang-zh">设备数量</div><div class="label lang-en">Machines</div><div class="label lang-ja">設備台数</div><div class="label lang-ko">장비 대수</div></div>
+          <div class="about-stat"><div class="num">18</div><div class="label lang-zh">全制程</div><div class="label lang-en">Full Process</div><div class="label lang-ja">全工程</div></div>
         </div>
       </div>
     </div>
@@ -316,66 +317,66 @@ body.korean .lang-ko{display:revert !important}
 <section class="section section-alt" id="capabilities">
   <div class="section-inner">
     <h2 class="section-title lang-zh">业务范围</h2>
-    <h2 class="section-title lang-en" style="display:none">Capabilities</h2>
-    <h2 class="section-title lang-ja" style="display:none">事業内容</h2>
-    <h2 class="section-title lang-ko" style="display:none">서비스</h2>
+    <h2 class="section-title lang-en">Capabilities</h2>
+    <h2 class="section-title lang-ja">事業内容</h2>
+    <h2 class="section-title lang-ko">서비스</h2>
     <p class="section-sub lang-zh">从单工序零件到全制程总成，灵活满足您的需求</p>
-    <p class="section-sub lang-en" style="display:none">From single-operation parts to full-process assemblies, we flexibly meet your needs.</p>
-    <p class="section-sub lang-ja" style="display:none">単工程部品から全工程組立まで、お客様のニーズに柔軟にお応えします</p>
+    <p class="section-sub lang-en">From single-operation parts to full-process assemblies, we flexibly meet your needs.</p>
+    <p class="section-sub lang-ja">単工程部品から全工程組立まで、お客様のニーズに柔軟にお応えします</p>
     <div class="cap-grid">
       <div class="cap-card">
         <div class="icon">⚙️</div>
         <h3 class="lang-zh">CNC数控加工</h3>
-        <h3 class="lang-en" style="display:none">CNC Machining</h3>
-        <h3 class="lang-ja" style="display:none">CNC加工</h3>
+        <h3 class="lang-en">CNC Machining</h3>
+        <h3 class="lang-ja">CNC加工</h3>
         <p class="lang-zh">3轴/4轴/5轴加工中心，精度可达±0.005mm，支持铝合金/不锈钢/铜/钛/工程塑料等30+材料</p>
-        <p class="lang-en" style="display:none">3/4/5-axis machining centers, tolerances down to ±0.005mm. 30+ materials including aluminum, stainless steel, brass, titanium, engineering plastics.</p>
-        <p class="lang-ja" style="display:none">3/4/5軸マシニングセンタ、精度±0.005mm。アルミ/ステンレス/銅/チタン/エンプラ等30種類以上の素材に対応。</p>
+        <p class="lang-en">3/4/5-axis machining centers, tolerances down to ±0.005mm. 30+ materials including aluminum, stainless steel, brass, titanium, engineering plastics.</p>
+        <p class="lang-ja">3/4/5軸マシニングセンタ、精度±0.005mm。アルミ/ステンレス/銅/チタン/エンプラ等30種類以上の素材に対応。</p>
       </div>
       <div class="cap-card">
         <div class="icon">🔩</div>
         <h3 class="lang-zh">车铣复合加工</h3>
-        <h3 class="lang-en" style="display:none">Mill-Turn</h3>
-        <h3 class="lang-ja" style="display:none">複合加工</h3>
+        <h3 class="lang-en">Mill-Turn</h3>
+        <h3 class="lang-ja">複合加工</h3>
         <p class="lang-zh">走心机/走刀机，一次装夹完成车削、铣削、钻孔、攻丝，适用于精密轴类/异形件</p>
-        <p class="lang-en" style="display:none">Swiss-type and sliding-head lathes with live tooling. Complete complex parts in one setup.</p>
-        <p class="lang-ja" style="display:none">自動旋盤・複合加工機で、1回のチャッキングで旋削・フライス・穴あけ・タップ加工を完了。精密軸物・異形部品に最適。</p>
+        <p class="lang-en">Swiss-type and sliding-head lathes with live tooling. Complete complex parts in one setup.</p>
+        <p class="lang-ja">自動旋盤・複合加工機で、1回のチャッキングで旋削・フライス・穴あけ・タップ加工を完了。精密軸物・異形部品に最適。</p>
       </div>
       <div class="cap-card">
         <div class="icon">🔧</div>
         <h3 class="lang-zh">冲压钣金</h3>
-        <h3 class="lang-en" style="display:none">Stamping & Sheet Metal</h3>
-        <h3 class="lang-ja" style="display:none">板金加工</h3>
+        <h3 class="lang-en">Stamping & Sheet Metal</h3>
+        <h3 class="lang-ja">板金加工</h3>
         <p class="lang-zh">精密冲压/折弯/激光切割/焊接，机箱外壳/支架/结构件</p>
-        <p class="lang-en" style="display:none">Precision stamping, bending, laser cutting, welding. Enclosures, brackets, structural components.</p>
-        <p class="lang-ja" style="display:none">精密プレス・曲げ・レーザー切断・溶接。筐体・ブラケット・構造部品に対応。</p>
+        <p class="lang-en">Precision stamping, bending, laser cutting, welding. Enclosures, brackets, structural components.</p>
+        <p class="lang-ja">精密プレス・曲げ・レーザー切断・溶接。筐体・ブラケット・構造部品に対応。</p>
       </div>
       <div class="cap-card">
         <div class="icon">🔄</div>
         <h3 class="lang-zh">表面处理</h3>
-        <h3 class="lang-en" style="display:none">Surface Finishing</h3>
-        <h3 class="lang-ja" style="display:none">表面処理</h3>
+        <h3 class="lang-en">Surface Finishing</h3>
+        <h3 class="lang-ja">表面処理</h3>
         <p class="lang-zh">阳极氧化/电镀/喷涂/钝化/拉丝/抛光/喷砂。符合RoHS/REACH标准</p>
-        <p class="lang-en" style="display:none">Anodizing, plating, powder coating, passivation, brushing, polishing, sandblasting. RoHS/REACH compliant.</p>
-        <p class="lang-ja" style="display:none">アルマイト/メッキ/粉体塗装/不動態処理/ヘアライン/研磨/サンドブラスト。RoHS/REACH準拠。</p>
+        <p class="lang-en">Anodizing, plating, powder coating, passivation, brushing, polishing, sandblasting. RoHS/REACH compliant.</p>
+        <p class="lang-ja">アルマイト/メッキ/粉体塗装/不動態処理/ヘアライン/研磨/サンドブラスト。RoHS/REACH準拠。</p>
       </div>
       <div class="cap-card">
         <div class="icon">📋</div>
         <h3 class="lang-zh">供应链全制程</h3>
-        <h3 class="lang-en" style="display:none">Supply Chain Mgmt</h3>
-        <h3 class="lang-ja" style="display:none">サプライチェーン</h3>
+        <h3 class="lang-en">Supply Chain Mgmt</h3>
+        <h3 class="lang-ja">サプライチェーン</h3>
         <p class="lang-zh">紧固件/塑胶/钣金/压铸/冲压/热处理/表面处理等全制程外协管理，统一品质标准</p>
-        <p class="lang-en" style="display:none">Fasteners, plastics, sheet metal, die casting, heat treatment — fully managed sub-supply chain with unified quality standards.</p>
-        <p class="lang-ja" style="display:none">ファスナー/プラスチック/板金/ダイカスト/プレス/熱処理/表面処理等、全工程外注管理。統一品質基準で管理。</p>
+        <p class="lang-en">Fasteners, plastics, sheet metal, die casting, heat treatment — fully managed sub-supply chain with unified quality standards.</p>
+        <p class="lang-ja">ファスナー/プラスチック/板金/ダイカスト/プレス/熱処理/表面処理等、全工程外注管理。統一品質基準で管理。</p>
       </div>
       <div class="cap-card">
         <div class="icon">📐</div>
         <h3 class="lang-zh">设计与优化</h3>
-        <h3 class="lang-en" style="display:none">Design & DFM</h3>
-        <h3 class="lang-ja" style="display:none">設計・最適化</h3>
+        <h3 class="lang-en">Design & DFM</h3>
+        <h3 class="lang-ja">設計・最適化</h3>
         <p class="lang-zh">DFM分析（可制造性设计）、图纸评审、工艺优化、协助客户降本增效</p>
-        <p class="lang-en" style="display:none">DFM analysis, drawing review, process optimization. Help clients reduce cost and improve manufacturability.</p>
-        <p class="lang-ja" style="display:none">DFM解析（設計の製造適合性評価）、図面レビュー、工程最適化。コスト削減と効率向上を支援。</p>
+        <p class="lang-en">DFM analysis, drawing review, process optimization. Help clients reduce cost and improve manufacturability.</p>
+        <p class="lang-ja">DFM解析（設計の製造適合性評価）、図面レビュー、工程最適化。コスト削減と効率向上を支援。</p>
       </div>
     </div>
   </div>
@@ -385,30 +386,30 @@ body.korean .lang-ko{display:revert !important}
 <section class="section" id="quality">
   <div class="section-inner">
     <h2 class="section-title lang-zh">品质保证</h2>
-    <h2 class="section-title lang-en" style="display:none">Quality Assurance</h2>
-    <h2 class="section-title lang-ja" style="display:none">品質保証</h2>
-    <h2 class="section-title lang-ko" style="display:none">품질 보증</h2>
+    <h2 class="section-title lang-en">Quality Assurance</h2>
+    <h2 class="section-title lang-ja">品質保証</h2>
+    <h2 class="section-title lang-ko">품질 보증</h2>
     <p class="section-sub lang-zh">60余台检测设备 · 全制程质量追溯 · 严守ISO 9001标准</p>
-    <p class="section-sub lang-en" style="display:none">60+ inspection instruments · Full-process traceability · ISO 9001 standards</p>
-    <p class="section-sub lang-ja" style="display:none">60台以上の検査機器 · 全工程トレーサビリティ · ISO 9001認証</p>
+    <p class="section-sub lang-en">60+ inspection instruments · Full-process traceability · ISO 9001 standards</p>
+    <p class="section-sub lang-ja">60台以上の検査機器 · 全工程トレーサビリティ · ISO 9001認証</p>
     <div class="quality-qrid">
-      <div class="quality-item"><div class="icon">📏</div><h4 class="lang-zh">三坐标测量</h4><h4 class="lang-en" style="display:none">CMM</h4><h4 class="lang-ja" style="display:none">三次元測定</h4><p class="lang-zh">精度±1μm</p><p class="lang-en" style="display:none">Accuracy ±1μm</p><p class="lang-ja" style="display:none">精度±1μm</p></div>
-      <div class="quality-item"><div class="icon">🔬</div><h4 class="lang-zh">影像测量仪</h4><h4 class="lang-en" style="display:none">Vision System</h4><h4 class="lang-ja" style="display:none">画像測定機</h4><p class="lang-zh">自动编程测量</p><p class="lang-en" style="display:none">Auto programming</p><p class="lang-ja" style="display:none">自動プログラム測定</p></div>
-      <div class="quality-item"><div class="icon">✅</div><h4 class="lang-zh">全检出货</h4><h4 class="lang-en" style="display:none">100% Inspection</h4><h4 class="lang-ja" style="display:none">全数検査</h4><p class="lang-zh">出货前全尺寸检测</p><p class="lang-en" style="display:none">Full dimensional check</p><p class="lang-ja" style="display:none">出荷前全数寸法検査</p></div>
-      <div class="quality-item"><div class="icon">📊</div><h4 class="lang-zh">CPK分析</h4><h4 class="lang-en" style="display:none">CPK Analysis</h4><h4 class="lang-ja" style="display:none">CPK分析</h4><p class="lang-zh">过程能力持续监控</p><p class="lang-en" style="display:none">Process capability monitoring</p><p class="lang-ja" style="display:none">工程能力継続監視</p></div>
-      <div class="quality-item"><div class="icon">🔍</div><h4 class="lang-zh">IQC/IPQC/OQC</h4><h4 class="lang-en" style="display:none">IQC/IPQC/OQC</h4><h4 class="lang-ja" style="display:none">IQC/IPQC/OQC</h4><p class="lang-zh">三级检验体系</p><p class="lang-en" style="display:none">3-tier inspection</p><p class="lang-ja" style="display:none">3段階検査体制</p></div>
-      <div class="quality-item"><div class="icon">📝</div><h4 class="lang-zh">全制程追溯</h4><h4 class="lang-en" style="display:none">Traceability</h4><h4 class="lang-ja" style="display:none">全工程トレース</h4><p class="lang-zh">每道工序可追溯</p><p class="lang-en" style="display:none">Full process records</p><p class="lang-ja" style="display:none">各工程の記録を保存</p></div>
+      <div class="quality-item"><div class="icon">📏</div><h4 class="lang-zh">三坐标测量</h4><h4 class="lang-en">CMM</h4><h4 class="lang-ja">三次元測定</h4><p class="lang-zh">精度±1μm</p><p class="lang-en">Accuracy ±1μm</p><p class="lang-ja">精度±1μm</p></div>
+      <div class="quality-item"><div class="icon">🔬</div><h4 class="lang-zh">影像测量仪</h4><h4 class="lang-en">Vision System</h4><h4 class="lang-ja">画像測定機</h4><p class="lang-zh">自动编程测量</p><p class="lang-en">Auto programming</p><p class="lang-ja">自動プログラム測定</p></div>
+      <div class="quality-item"><div class="icon">✅</div><h4 class="lang-zh">全检出货</h4><h4 class="lang-en">100% Inspection</h4><h4 class="lang-ja">全数検査</h4><p class="lang-zh">出货前全尺寸检测</p><p class="lang-en">Full dimensional check</p><p class="lang-ja">出荷前全数寸法検査</p></div>
+      <div class="quality-item"><div class="icon">📊</div><h4 class="lang-zh">CPK分析</h4><h4 class="lang-en">CPK Analysis</h4><h4 class="lang-ja">CPK分析</h4><p class="lang-zh">过程能力持续监控</p><p class="lang-en">Process capability monitoring</p><p class="lang-ja">工程能力継続監視</p></div>
+      <div class="quality-item"><div class="icon">🔍</div><h4 class="lang-zh">IQC/IPQC/OQC</h4><h4 class="lang-en">IQC/IPQC/OQC</h4><h4 class="lang-ja">IQC/IPQC/OQC</h4><p class="lang-zh">三级检验体系</p><p class="lang-en">3-tier inspection</p><p class="lang-ja">3段階検査体制</p></div>
+      <div class="quality-item"><div class="icon">📝</div><h4 class="lang-zh">全制程追溯</h4><h4 class="lang-en">Traceability</h4><h4 class="lang-ja">全工程トレース</h4><p class="lang-zh">每道工序可追溯</p><p class="lang-en">Full process records</p><p class="lang-ja">各工程の記録を保存</p></div>
     </div>
     <!-- ISO 9001 认证证书 -->
     <div class="cert-section">
       <h3 class="cert-title lang-zh">ISO 9001 质量管理体系认证</h3>
-      <h3 class="cert-title lang-en" style="display:none">ISO 9001 Quality Management System</h3>
-      <h3 class="cert-title lang-ja" style="display:none">ISO 9001 品質マネジメントシステム</h3>
-      <h3 class="cert-title lang-ko" style="display:none">ISO 9001 품질 경영 시스템</h3>
+      <h3 class="cert-title lang-en">ISO 9001 Quality Management System</h3>
+      <h3 class="cert-title lang-ja">ISO 9001 品質マネジメントシステム</h3>
+      <h3 class="cert-title lang-ko">ISO 9001 품질 경영 시스템</h3>
       <div class="cert-card">
         <img src="ISO9001认证证书.jpg" alt="ISO9001质量管理体系认证证书" class="cert-img lang-zh">
-        <img src="ISO9001认证证书-EN.jpg" alt="ISO9001 Quality Management System Certificate" class="cert-img lang-en" style="display:none">
-        <img src="ISO9001认证证书-JP.jpg" alt="ISO9001 品質マネジメントシステム証明書" class="cert-img lang-ja" style="display:none">
+        <img src="ISO9001认证证书-EN.jpg" alt="ISO9001 Quality Management System Certificate" class="cert-img lang-en">
+        <img src="ISO9001认证证书-JP.jpg" alt="ISO9001 品質マネジメントシステム証明書" class="cert-img lang-ja">
         <div class="cert-info lang-zh">
           <p><strong>证书编号：</strong>98923Q00199R0S</p>
           <p><strong>认证标准：</strong>GB/T19001-2016 / ISO9001:2015</p>
@@ -417,7 +418,7 @@ body.korean .lang-ko{display:revert !important}
           <p><strong>颁证机构：</strong>广东中和认证有限公司 (HCC)</p>
           <p class="cert-verify">证书信息可在国家认监委官网 <a href="http://www.cnca.gov.cn" target="_blank" rel="noopener">www.cnca.gov.cn</a> 查询</p>
         </div>
-        <div class="cert-info lang-en" style="display:none">
+        <div class="cert-info lang-en">
           <p><strong>Certificate No:</strong> 98923Q00199R0S</p>
           <p><strong>Standard:</strong> GB/T19001-2016 / ISO9001:2015</p>
           <p><strong>Scope:</strong> Processing and Sales of Precision Hardware</p>
@@ -425,7 +426,7 @@ body.korean .lang-ko{display:revert !important}
           <p><strong>Issuer:</strong> Guangdong Harmonious Certification Co., Ltd.</p>
           <p class="cert-verify">Verify at <a href="http://www.cnca.gov.cn" target="_blank" rel="noopener">www.cnca.gov.cn</a></p>
         </div>
-        <div class="cert-info lang-ja" style="display:none">
+        <div class="cert-info lang-ja">
           <p><strong>証明書番号：</strong>98923Q00199R0S</p>
           <p><strong>認証規格：</strong>GB/T19001-2016 / ISO9001:2015</p>
           <p><strong>適用範囲：</strong>精密金物の加工および販売</p>
@@ -442,9 +443,9 @@ body.korean .lang-ko{display:revert !important}
 <section class="section" id="inspection">
   <div class="section-inner">
     <h3 class="cert-title lang-zh">检验设备实拍</h3>
-    <h3 class="cert-title lang-en" style="display:none">Inspection Equipment</h3>
-    <h3 class="cert-title lang-ja" style="display:none">検査設備</h3>
-    <h3 class="cert-title lang-ko" style="display:none">검사 장비</h3>
+    <h3 class="cert-title lang-en">Inspection Equipment</h3>
+    <h3 class="cert-title lang-ja">検査設備</h3>
+    <h3 class="cert-title lang-ko">검사 장비</h3>
     <div class="gallery-grid">
       <div class="gallery-item"><img src="检验设备1.jpg" alt="精密检测设备" loading="lazy"></div>
       <div class="gallery-item"><img src="检验设备2.jpg" alt="检测仪器" loading="lazy"></div>
@@ -461,22 +462,22 @@ body.korean .lang-ko{display:revert !important}
 <section class="section section-alt" id="cases">
   <div class="section-inner">
     <h2 class="section-title lang-zh">客户案例</h2>
-    <h2 class="section-title lang-en" style="display:none">Project Showcase</h2>
-    <h2 class="section-title lang-ja" style="display:none">導入実績</h2>
-    <h2 class="section-title lang-ko" style="display:none">프로젝트</h2>
+    <h2 class="section-title lang-en">Project Showcase</h2>
+    <h2 class="section-title lang-ja">導入実績</h2>
+    <h2 class="section-title lang-ko">프로젝트</h2>
     <p class="section-sub lang-zh">每一个零件背后都是严谨的工艺与极致的检验</p>
-    <p class="section-sub lang-en" style="display:none">Every part tells a story of precision process and rigorous inspection.</p>
-    <p class="section-sub lang-ja" style="display:none">一つひとつの部品に、精密な工程と徹底した検査の物語があります</p>
+    <p class="section-sub lang-en">Every part tells a story of precision process and rigorous inspection.</p>
+    <p class="section-sub lang-ja">一つひとつの部品に、精密な工程と徹底した検査の物語があります</p>
     <div class="case-grid">
       <div class="case-card">
         <div class="case-img"><img src="案例图1.jpg" alt="客户案例1"></div>
         <div class="case-body">
           <h3 class="lang-zh">机器人钛合金零件</h3>
-          <h3 class="lang-en" style="display:none">Robot Titanium Alloy Parts</h3>
-          <h3 class="lang-ja" style="display:none">ロボット用チタン合金部品</h3>
+          <h3 class="lang-en">Robot Titanium Alloy Parts</h3>
+          <h3 class="lang-ja">ロボット用チタン合金部品</h3>
           <p class="lang-zh">某知名机器人品牌 · 钛合金精密CNC加工 · 轻量化结构件</p>
-          <p class="lang-en" style="display:none">Leading robot brand · Titanium precision CNC · Lightweight structural parts</p>
-          <p class="lang-ja" style="display:none">大手ロボットブランド · チタン合金精密CNC加工 · 軽量構造部品</p>
+          <p class="lang-en">Leading robot brand · Titanium precision CNC · Lightweight structural parts</p>
+          <p class="lang-ja">大手ロボットブランド · チタン合金精密CNC加工 · 軽量構造部品</p>
           <div class="case-tags"><span>钛合金</span><span>精密CNC</span><span>机器人</span><span>轻量化</span></div>
         </div>
       </div>
@@ -484,11 +485,11 @@ body.korean .lang-ko{display:revert !important}
         <div class="case-img"><img src="案例图2.jpg" alt="客户案例2"></div>
         <div class="case-body">
           <h3 class="lang-zh">香港停车咪表</h3>
-          <h3 class="lang-en" style="display:none">Hong Kong Parking Meter</h3>
-          <h3 class="lang-ja" style="display:none">香港駐車メーター</h3>
+          <h3 class="lang-en">Hong Kong Parking Meter</h3>
+          <h3 class="lang-ja">香港駐車メーター</h3>
           <p class="lang-zh">香港交通基础设施 · 精密五金结构件 · 户外耐用防护</p>
-          <p class="lang-en" style="display:none">HK transport infrastructure · Precision metal parts · Outdoor durable</p>
-          <p class="lang-ja" style="display:none">香港交通インフラ · 精密金物構造部品 · 屋外耐久仕様</p>
+          <p class="lang-en">HK transport infrastructure · Precision metal parts · Outdoor durable</p>
+          <p class="lang-ja">香港交通インフラ · 精密金物構造部品 · 屋外耐久仕様</p>
           <div class="case-tags"><span>交通设施</span><span>精密结构件</span><span>户外防护</span></div>
         </div>
       </div>
@@ -496,11 +497,11 @@ body.korean .lang-ko{display:revert !important}
         <div class="case-img"><img src="案例图3.jpg" alt="客户案例3"></div>
         <div class="case-body">
           <h3 class="lang-zh">蓝光护眼灯 / 智能充电保温杯</h3>
-          <h3 class="lang-en" style="display:none">Eye-Protection Lamp / Smart Cup</h3>
-          <h3 class="lang-ja" style="display:none">ブルーライトカット灯 / スマート保温カップ</h3>
+          <h3 class="lang-en">Eye-Protection Lamp / Smart Cup</h3>
+          <h3 class="lang-ja">ブルーライトカット灯 / スマート保温カップ</h3>
           <p class="lang-zh">精密五金+塑胶结构件 · 消费电子外观件 · 表面处理一体化</p>
-          <p class="lang-en" style="display:none">Precision metal & plastic parts · Consumer electronics · Integrated finishing</p>
-          <p class="lang-ja" style="display:none">精密金物+プラスチック構造部品 · 家電外装部品 · 表面処理一体対応</p>
+          <p class="lang-en">Precision metal & plastic parts · Consumer electronics · Integrated finishing</p>
+          <p class="lang-ja">精密金物+プラスチック構造部品 · 家電外装部品 · 表面処理一体対応</p>
           <div class="case-tags"><span>消费电子</span><span>结构件</span><span>表面处理</span><span>精密注塑</span></div>
         </div>
       </div>
@@ -512,12 +513,12 @@ body.korean .lang-ko{display:revert !important}
 <section class="section" id="gallery">
   <div class="section-inner">
     <h2 class="section-title lang-zh">公司实景</h2>
-    <h2 class="section-title lang-en" style="display:none">Factory Tour</h2>
-    <h2 class="section-title lang-ja" style="display:none">工場見学</h2>
-    <h2 class="section-title lang-ko" style="display:none">공장 투어</h2>
+    <h2 class="section-title lang-en">Factory Tour</h2>
+    <h2 class="section-title lang-ja">工場見学</h2>
+    <h2 class="section-title lang-ko">공장 투어</h2>
     <p class="section-sub lang-zh">精工细作，始于车间 — 每一台设备都是品质的基石</p>
-    <p class="section-sub lang-en" style="display:none">Precision begins on the shop floor — every machine is the foundation of quality.</p>
-    <p class="section-sub lang-ja" style="display:none">精密加工は工場から—一台一台の設備が品質の基盤です</p>
+    <p class="section-sub lang-en">Precision begins on the shop floor — every machine is the foundation of quality.</p>
+    <p class="section-sub lang-ja">精密加工は工場から—一台一台の設備が品質の基盤です</p>
     <div class="gallery-grid">
       <div class="gallery-item"><img src="车间实拍1.jpg" alt="CNC加工车间" loading="lazy"></div>
       <div class="gallery-item"><img src="车间实拍2.jpg" alt="精密加工现场" loading="lazy"></div>
@@ -537,12 +538,12 @@ body.korean .lang-ko{display:revert !important}
 <section class="section" id="products">
   <div class="section-inner">
     <h2 class="section-title lang-zh">产品展示</h2>
-    <h2 class="section-title lang-en" style="display:none">Products</h2>
-    <h2 class="section-title lang-ja" style="display:none">製品紹介</h2>
-    <h2 class="section-title lang-ko" style="display:none">제품</h2>
+    <h2 class="section-title lang-en">Products</h2>
+    <h2 class="section-title lang-ja">製品紹介</h2>
+    <h2 class="section-title lang-ko">제품</h2>
     <p class="section-sub lang-zh">精密CNC加工 · 车铣复合 · 全制程外协</p>
-    <p class="section-sub lang-en" style="display:none">Precision CNC · Mill-Turn · Full Process</p>
-    <p class="section-sub lang-ja" style="display:none">精密CNC · 複合加工 · 全工程外注</p>
+    <p class="section-sub lang-en">Precision CNC · Mill-Turn · Full Process</p>
+    <p class="section-sub lang-ja">精密CNC · 複合加工 · 全工程外注</p>
     <div class="product-grid">
       <div class="product-item"><img src="产品图/芯片组装载具.jpg" alt="芯片组装载具" loading="lazy"></div>
       <div class="product-item"><img src="产品图/医疗零件.jpg" alt="医疗零件" loading="lazy"></div>
@@ -562,12 +563,12 @@ body.korean .lang-ko{display:revert !important}
 <section class="section" id="faq">
   <div class="section-inner">
     <h2 class="section-title lang-zh">常见问题</h2>
-    <h2 class="section-title lang-en" style="display:none">FAQ</h2>
-    <h2 class="section-title lang-ja" style="display:none">よくある質問</h2>
-    <h2 class="section-title lang-ko" style="display:none">자주 묻는 질문</h2>
+    <h2 class="section-title lang-en">FAQ</h2>
+    <h2 class="section-title lang-ja">よくある質問</h2>
+    <h2 class="section-title lang-ko">자주 묻는 질문</h2>
     <p class="section-sub lang-zh">您关心的，我们来回答</p>
-    <p class="section-sub lang-en" style="display:none">Your questions answered</p>
-    <p class="section-sub lang-ja" style="display:none">よくあるご質問をまとめました</p>
+    <p class="section-sub lang-en">Your questions answered</p>
+    <p class="section-sub lang-ja">よくあるご質問をまとめました</p>
     <div class="faq-list" id="faqList"></div>
   </div>
 </section>
@@ -576,26 +577,26 @@ body.korean .lang-ko{display:revert !important}
 <section class="section section-alt" id="contact">
   <div class="section-inner">
     <h2 class="section-title lang-zh">联系我们</h2>
-    <h2 class="section-title lang-en" style="display:none">Contact Us</h2>
-    <h2 class="section-title lang-ja" style="display:none">お問い合わせ</h2>
-    <h2 class="section-title lang-ko" style="display:none">문의하기</h2>
+    <h2 class="section-title lang-en">Contact Us</h2>
+    <h2 class="section-title lang-ja">お問い合わせ</h2>
+    <h2 class="section-title lang-ko">문의하기</h2>
     <p class="section-sub lang-zh">有项目需求、技术问题或合作意向？欢迎联系我们，2小时内回复</p>
-    <p class="section-sub lang-en" style="display:none">Have a project, technical question, or collaboration idea? We reply within 2 hours.</p>
-    <p class="section-sub lang-ja" style="display:none">プロジェクトのご依頼、技術的なご質問、協業のご提案など、2時間以内にご返信します</p>
+    <p class="section-sub lang-en">Have a project, technical question, or collaboration idea? We reply within 2 hours.</p>
+    <p class="section-sub lang-ja">プロジェクトのご依頼、技術的なご質問、協業のご提案など、2時間以内にご返信します</p>
     <div class="contact-grid">
       <div class="contact-info">
         <h3 class="lang-zh">星越五金科技</h3>
-        <h3 class="lang-en" style="display:none">Joystar Metal</h3>
-        <h3 class="lang-ja" style="display:none">星越五金科技</h3>
-        <h3 class="lang-ko" style="display:none">성월정밀금속기술</h3>
+        <h3 class="lang-en">Joystar Metal</h3>
+        <h3 class="lang-ja">星越五金科技</h3>
+        <h3 class="lang-ko">성월정밀금속기술</h3>
         <p><span class="label">📞</span> +86 13509657859</p>
-        <p><span class="label">💬</span> <span class="lang-zh">微信：jacky9890</span><span class="lang-en" style="display:none">WeChat: jacky9890</span><span class="lang-ja" style="display:none">WeChat: jacky9890</span></p>
+        <p><span class="label">💬</span> <span class="lang-zh">微信：jacky9890</span><span class="lang-en">WeChat: jacky9890</span><span class="lang-ja">WeChat: jacky9890</span></p>
         <p><span class="label">📧</span> Jackyxiao@dgjoystar.com</p>
-        <p><span class="label">📍</span> <span class="lang-zh">广东省东莞市塘厦镇大岭公一巷7号</span><span class="lang-en" style="display:none">No.7 Dalingsong 1st Lane, Tangxia, Dongguan, Guangdong, China</span><span class="lang-ja" style="display:none">中国広東省東莞市塘厦鎮大嶺公一巷7号</span></p>
+        <p><span class="label">📍</span> <span class="lang-zh">广东省东莞市塘厦镇大岭公一巷7号</span><span class="lang-en">No.7 Dalingsong 1st Lane, Tangxia, Dongguan, Guangdong, China</span><span class="lang-ja">中国広東省東莞市塘厦鎮大嶺公一巷7号</span></p>
         <p style="margin-top:16px;font-size:13px;color:#999">
           <span class="lang-zh">工作时间：周一至周六 8:00 - 18:00</span>
-          <span class="lang-en" style="display:none">Hours: Mon-Sat 8:00-18:00</span>
-          <span class="lang-ja" style="display:none">営業時間：月〜土 8:00〜18:00</span>
+          <span class="lang-en">Hours: Mon-Sat 8:00-18:00</span>
+          <span class="lang-ja">営業時間：月〜土 8:00〜18:00</span>
         </p>
       </div>
       <form class="contact-form" onsubmit="submitForm(event)">
@@ -604,32 +605,26 @@ body.korean .lang-ko{display:revert !important}
         <input type="text" id="formSubject" placeholder="主题 / Subject / 件名">
         <textarea id="formMessage" placeholder="描述您的需求 / Describe your requirements... / ご要件をご記入ください..." required></textarea>
         <button type="submit" class="btn btn-primary lang-zh">发送询价</button>
-        <button type="submit" class="btn btn-primary lang-en" style="display:none">Send Inquiry</button>
-        <button type="submit" class="btn btn-primary lang-ja" style="display:none">お問い合わせ送信</button>
-        <button type="submit" class="btn btn-primary lang-ko" style="display:none">문의 보내기</button>
+        <button type="submit" class="btn btn-primary lang-en">Send Inquiry</button>
+        <button type="submit" class="btn btn-primary lang-ja">お問い合わせ送信</button>
+        <button type="submit" class="btn btn-primary lang-ko">문의 보내기</button>
       </form>
     </div>
   </div>
 </section>
 
 <footer class="footer">
-  <p>© 2026 <span class="lang-zh">星越五金科技</span><span class="lang-en" style="display:none">Dongguan Joystar Metal Products Technology Co., Ltd.</span><span class="lang-ja" style="display:none">東莞星越五金科技有限公司</span><span class="lang-ko" style="display:none">동관성월정밀금속기술유한회사</span> — All Rights Reserved</p>
+  <p>© 2026 <span class="lang-zh">星越五金科技</span><span class="lang-en">Dongguan Joystar Metal Products Technology Co., Ltd.</span><span class="lang-ja">東莞星越五金科技有限公司</span><span class="lang-ko">동관성월정밀금속기술유한회사</span> — All Rights Reserved</p>
 </footer>
 
 <script>
 // ===== Language Toggle =====
 function setLang(lang){
-  document.body.className = (lang === 'en') ? 'english' : (lang === 'ja') ? 'japanese' : (lang === 'ko') ? 'korean' : '';
+  document.body.className = (lang === 'zh') ? '' : (lang === 'en') ? 'english' : (lang === 'ja') ? 'japanese' : 'korean' || '';
   // Update language bar active state
   const labels = {zh:'中文', en:'English', ja:'日本語', ko:'한국어'};
   document.querySelectorAll('.lang-bar a').forEach(a => a.classList.toggle('active', a.textContent === labels[lang]));
-  // Hide non-active languages via JS inline
-  ['lang-zh','lang-en','lang-ja','lang-ko'].forEach(cls => {
-    if(cls !== 'lang-' + lang){
-      document.querySelectorAll('.' + cls).forEach(el => el.style.display = 'none');
-    }
-  });
-  // CSS (with body class + !important) handles showing active language
+  // CSS handles everything based on body class
   renderFAQ(lang);
 }
 
