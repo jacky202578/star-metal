@@ -168,12 +168,6 @@ body{font-family:-apple-system,"PingFang SC","Microsoft YaHei","Helvetica Neue",
 /* ===== Lang-specific ===== */
 .lang-en{display:none}
 .lang-ja{display:none}
-body.english .lang-zh{display:none}
-body.english .lang-en{display:block}
-body.japanese .lang-zh{display:none}
-body.japanese .lang-ja{display:block !important}
-body.japanese .lang-en{display:none !important}
-body.english .lang-ja{display:none !important}
 
 /* ===== 微信浮窗 ===== */
 .wechat-float{position:fixed;right:20px;bottom:100px;z-index:999;width:52px;height:52px;background:#07C160;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 12px rgba(7,193,96,.4);transition:transform .2s,box-shadow .2s}
@@ -599,16 +593,14 @@ function setLang(lang){
   // Update active state
   const labels = {zh:'中文', en:'English', ja:'日本語'};
   document.querySelectorAll('.lang-bar a').forEach(a => a.classList.toggle('active', a.textContent === labels[lang]));
-  // Toggle nav links
-  document.querySelectorAll('.nav a').forEach(a => {
-    if(a.classList.contains('lang-zh')) a.style.display = (lang === 'zh') ? '' : 'none';
-    if(a.classList.contains('lang-en')) a.style.display = (lang === 'en') ? '' : 'none';
-    if(a.classList.contains('lang-ja')) a.style.display = (lang === 'ja') ? '' : 'none';
-  });
-  // Toggle all lang elements
-  document.querySelectorAll('.lang-zh').forEach(el => el.style.display = (lang === 'zh') ? '' : 'none');
-  document.querySelectorAll('.lang-en').forEach(el => el.style.display = (lang === 'en') ? '' : 'none');
-  document.querySelectorAll('.lang-ja').forEach(el => el.style.display = (lang === 'ja') ? '' : 'none');
+  // Hide ALL lang elements first, then show only the active language
+  document.querySelectorAll('.lang-zh').forEach(el => el.style.setProperty('display', lang === 'zh' ? '' : 'none', 'important'));
+  document.querySelectorAll('.lang-en').forEach(el => el.style.setProperty('display', lang === 'en' ? '' : 'none', 'important'));
+  document.querySelectorAll('.lang-ja').forEach(el => el.style.setProperty('display', lang === 'ja' ? '' : 'none', 'important'));
+  // For active language, remove the forced display so CSS can decide
+  if(lang === 'zh') document.querySelectorAll('.lang-zh').forEach(el => el.style.removeProperty('display'));
+  if(lang === 'en') document.querySelectorAll('.lang-en').forEach(el => el.style.removeProperty('display'));
+  if(lang === 'ja') document.querySelectorAll('.lang-ja').forEach(el => el.style.removeProperty('display'));
   // Update FAQ content
   renderFAQ(lang);
 }
