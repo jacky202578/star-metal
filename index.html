@@ -169,9 +169,10 @@ body{font-family:-apple-system,"PingFang SC","Microsoft YaHei","Helvetica Neue",
 .lang-en{display:none}
 .lang-ja{display:none}
 .lang-ko{display:none}
-body.korean .lang-zh{display:none !important}
-body.korean .lang-en{display:none !important}
-body.korean .lang-ja{display:none !important}
+body.english .lang-zh,body.japanese .lang-zh,body.korean .lang-zh{display:none !important}
+body.english .lang-en{display:initial !important}
+body.japanese .lang-ja{display:initial !important}
+body.korean .lang-ko{display:initial !important}
 
 /* ===== 微信浮窗 ===== */
 .wechat-float{position:fixed;right:20px;bottom:100px;z-index:999;width:52px;height:52px;background:#07C160;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 12px rgba(7,193,96,.4);transition:transform .2s,box-shadow .2s}
@@ -623,16 +624,12 @@ function setLang(lang){
   // Update active state
   const labels = {zh:'中文', en:'English', ja:'日本語', ko:'한국어'};
   document.querySelectorAll('.lang-bar a').forEach(a => a.classList.toggle('active', a.textContent === labels[lang]));
-  // Hide ALL lang elements first, then show only the active language
-  document.querySelectorAll('.lang-zh').forEach(el => el.style.setProperty('display', lang === 'zh' ? '' : 'none', 'important'));
-  document.querySelectorAll('.lang-en').forEach(el => el.style.setProperty('display', lang === 'en' ? '' : 'none', 'important'));
-  document.querySelectorAll('.lang-ja').forEach(el => el.style.setProperty('display', lang === 'ja' ? '' : 'none', 'important'));
-  document.querySelectorAll('.lang-ko').forEach(el => el.style.setProperty('display', lang === 'ko' ? '' : 'none', 'important'));
-  // For active language, remove the forced display so CSS can decide
-  if(lang === 'zh') document.querySelectorAll('.lang-zh').forEach(el => el.style.removeProperty('display'));
-  if(lang === 'en') document.querySelectorAll('.lang-en').forEach(el => el.style.removeProperty('display'));
-  if(lang === 'ja') document.querySelectorAll('.lang-ja').forEach(el => el.style.removeProperty('display'));
-  if(lang === 'ko') document.querySelectorAll('.lang-ko').forEach(el => el.style.removeProperty('display'));
+  // Hide all language elements, CSS handles showing the active one
+  document.querySelectorAll('[class*="lang-"]').forEach(el => {
+    if(el.classList.contains('lang-zh') || el.classList.contains('lang-en') || el.classList.contains('lang-ja') || el.classList.contains('lang-ko')){
+      el.style.display = 'none';
+    }
+  });
   // Update FAQ content
   renderFAQ(lang);
 }
