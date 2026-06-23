@@ -166,13 +166,13 @@ body{font-family:-apple-system,"PingFang SC","Microsoft YaHei","Helvetica Neue",
 }
 
 /* ===== Lang-specific ===== */
-.lang-zh{display:revert}
-.lang-en,.lang-ja,.lang-ko{display:none}
-body:not(.chinese):not(.english):not(.japanese):not(.korean) .lang-zh{display:revert}
+.lang-en{display:none}
+.lang-ja{display:none}
+.lang-ko{display:none}
 body.english .lang-zh,body.japanese .lang-zh,body.korean .lang-zh{display:none}
-body.english .lang-en{display:revert}
-body.japanese .lang-ja{display:revert}
-body.korean .lang-ko{display:revert}
+body.english .lang-en{display:block}
+body.japanese .lang-ja{display:block}
+body.korean .lang-ko{display:block}
 
 /* ===== 微信浮窗 ===== */
 .wechat-float{position:fixed;right:20px;bottom:100px;z-index:999;width:52px;height:52px;background:#07C160;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 12px rgba(7,193,96,.4);transition:transform .2s,box-shadow .2s}
@@ -620,11 +620,15 @@ body.korean .lang-ko{display:revert}
 <script>
 // ===== Language Toggle =====
 function setLang(lang){
-  document.body.className = (lang === 'zh') ? '' : (lang === 'en') ? 'english' : (lang === 'ja') ? 'japanese' : 'korean' || '';
+  document.body.className = (lang === 'en') ? 'english' : (lang === 'ja') ? 'japanese' : (lang === 'ko') ? 'korean' : '';
   // Update language bar active state
   const labels = {zh:'中文', en:'English', ja:'日本語', ko:'한국어'};
   document.querySelectorAll('.lang-bar a').forEach(a => a.classList.toggle('active', a.textContent === labels[lang]));
-  // CSS handles everything based on body class
+  // Hide non-active languages via JS (CSS handles showing active via body class)
+  ['zh','en','ja','ko'].filter(l => l !== lang).forEach(l => {
+    document.querySelectorAll('.lang-' + l).forEach(el => el.style.display = 'none');
+  });
+  // Update FAQ content
   renderFAQ(lang);
 }
 
