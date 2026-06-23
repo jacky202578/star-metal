@@ -392,6 +392,7 @@ body.english .lang-ja{display:none !important}
       <div class="cert-card">
         <img src="ISO9001认证证书.jpg" alt="ISO9001质量管理体系认证证书" class="cert-img lang-zh">
         <img src="ISO9001认证证书-EN.jpg" alt="ISO9001 Quality Management System Certificate" class="cert-img lang-en" style="display:none">
+        <img src="ISO9001认证证书-JP.jpg" alt="ISO9001 品質マネジメントシステム証明書" class="cert-img lang-ja" style="display:none">
         <div class="cert-info lang-zh">
           <p><strong>证书编号：</strong>98923Q00199R0S</p>
           <p><strong>认证标准：</strong>GB/T19001-2016 / ISO9001:2015</p>
@@ -664,11 +665,12 @@ function toggleFAQ(el){
 function submitForm(e){
   e.preventDefault();
   const btn = e.target.querySelector('button');
+  const restoreText = {zh:'发送询价', en:'Send Inquiry', ja:'お問い合わせ送信'};
   const langMap = {zh:'已发送！', en:'Sent!', ja:'送信完了！'};
   const currentLang = document.body.className.includes('japanese') ? 'ja' : document.body.className.includes('english') ? 'en' : 'zh';
   btn.textContent = '✓ ' + (langMap[currentLang] || '已发送！');
   btn.style.background = '#27ae60';
-  setTimeout(() => { btn.textContent = document.body.className.includes('english') ? 'Send Inquiry' : '发送询价'; btn.style.background = ''; }, 3000);
+  setTimeout(() => { btn.textContent = restoreText[currentLang] || '发送询价'; btn.style.background = ''; }, 3000);
   // In production: send to backend
 }
 
