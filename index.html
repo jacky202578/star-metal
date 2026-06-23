@@ -594,17 +594,20 @@ body.english .lang-ja{display:none !important}
 <script>
 // ===== Language Toggle =====
 function setLang(lang){
-  document.body.className = (lang === 'en') ? 'english' : '';
+  document.body.className = (lang === 'en') ? 'english' : (lang === 'ja') ? 'japanese' : '';
   // Update active state
-  document.querySelectorAll('.lang-bar a').forEach(a => a.classList.toggle('active', a.textContent === (lang === 'zh' ? '中文' : 'English')));
+  const labels = {zh:'中文', en:'English', ja:'日本語'};
+  document.querySelectorAll('.lang-bar a').forEach(a => a.classList.toggle('active', a.textContent === labels[lang]));
   // Toggle nav links
   document.querySelectorAll('.nav a').forEach(a => {
     if(a.classList.contains('lang-zh')) a.style.display = (lang === 'zh') ? '' : 'none';
     if(a.classList.contains('lang-en')) a.style.display = (lang === 'en') ? '' : 'none';
+    if(a.classList.contains('lang-ja')) a.style.display = (lang === 'ja') ? '' : 'none';
   });
   // Toggle all lang elements
   document.querySelectorAll('.lang-zh').forEach(el => el.style.display = (lang === 'zh') ? '' : 'none');
   document.querySelectorAll('.lang-en').forEach(el => el.style.display = (lang === 'en') ? '' : 'none');
+  document.querySelectorAll('.lang-ja').forEach(el => el.style.display = (lang === 'ja') ? '' : 'none');
   // Update FAQ content
   renderFAQ(lang);
 }
