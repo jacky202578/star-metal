@@ -624,9 +624,11 @@ function setLang(lang){
   // Update language bar active state
   const labels = {zh:'中文', en:'English', ja:'日本語', ko:'한국어'};
   document.querySelectorAll('.lang-bar a').forEach(a => a.classList.toggle('active', a.textContent === labels[lang]));
-  // Hide non-active languages via JS (CSS handles showing active via body class)
-  ['zh','en','ja','ko'].filter(l => l !== lang).forEach(l => {
-    document.querySelectorAll('.lang-' + l).forEach(el => el.style.display = 'none');
+  // Hide ALL language elements first, then clear inline style for active language
+  ['zh','en','ja','ko'].forEach(l => {
+    document.querySelectorAll('.lang-' + l).forEach(el => {
+      el.style.display = (l === lang) ? '' : 'none';
+    });
   });
   // Update FAQ content
   renderFAQ(lang);
