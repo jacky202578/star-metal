@@ -171,8 +171,9 @@ body{font-family:-apple-system,"PingFang SC","Microsoft YaHei","Helvetica Neue",
 body.english .lang-zh{display:none}
 body.english .lang-en{display:block}
 body.japanese .lang-zh{display:none}
-body.japanese .lang-ja{display:block}
-body.japanese .lang-en{display:none}
+body.japanese .lang-ja{display:block !important}
+body.japanese .lang-en{display:none !important}
+body.english .lang-ja{display:none !important}
 
 /* ===== 微信浮窗 ===== */
 .wechat-float{position:fixed;right:20px;bottom:100px;z-index:999;width:52px;height:52px;background:#07C160;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 12px rgba(7,193,96,.4);transition:transform .2s,box-shadow .2s}
@@ -660,14 +661,16 @@ function toggleFAQ(el){
 function submitForm(e){
   e.preventDefault();
   const btn = e.target.querySelector('button');
-  btn.textContent = '✓ ' + (document.body.className.includes('english') ? 'Sent!' : '已发送！');
+  const langMap = {zh:'已发送！', en:'Sent!', ja:'送信完了！'};
+  const currentLang = document.body.className.includes('japanese') ? 'ja' : document.body.className.includes('english') ? 'en' : 'zh';
+  btn.textContent = '✓ ' + (langMap[currentLang] || '已发送！');
   btn.style.background = '#27ae60';
   setTimeout(() => { btn.textContent = document.body.className.includes('english') ? 'Send Inquiry' : '发送询价'; btn.style.background = ''; }, 3000);
   // In production: send to backend
 }
 
 // Init
-renderFAQ('zh');
+setLang('zh');
 </script>
 
 <!-- ===== 侧边微信浮窗 ===== -->
